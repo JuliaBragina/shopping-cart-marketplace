@@ -1,0 +1,57 @@
+.accordeon__icon{
+  cursor: pointer;
+}
+  
+.accordeon__icon:hover::before{
+  border-left: 3px solid #000;
+  border-bottom: 3px solid #000;
+}
+  
+.accordeon__icon::before{
+  content: '−';
+  display: block;
+  font-size: 0;
+  line-height: 0;
+  border-left: 3px solid #A0A0A4;
+  border-bottom: 3px solid #A0A0A4;
+  width: 8px;
+  height: 8px;
+  transform: rotate(135deg);
+  transition: margin .3s ease, transform .3s ease;
+}
+
+.accordeon__icon_is_closed{
+  transform: rotate(180deg);
+}
+
+.accordeon__info{
+  margin: 0;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  font-family: 'Segoe UI', Arial, sans-serif;
+
+  height: 24px;
+
+  display: flex;
+  align-items: center;
+}
+
+.accordeon__count{
+  margin: 0;
+}
+
+.accordeon__count::after{
+  content: '•';
+  display: inline-block;
+  width: 16px;
+  text-align: center;
+}
+
+.accordeon__price{
+  margin: 0;
+}
+
+.accordeon__info_is_hidden{
+  display: none;
+}

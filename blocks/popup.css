@@ -1,0 +1,255 @@
+/* Общие стили для попапов */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: hsla(270, 100%, 2%, 0.3);
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+  
+.popup_is_hidden {
+  display: flex;
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+  
+.popup__form {
+  position: relative;
+  width: 400px;
+  height: 408px;
+  border-radius: 16px;
+  background-color: white;
+}
+
+.popup__form_type_chooseDelivery{
+  width: 500px;
+}
+ 
+.popup__formContainer {
+  padding: 16px 22px 22px 24px;
+}
+  
+.popup__titleContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 13px;
+}
+  
+.popup__title {
+  margin: 0;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: bold;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  letter-spacing: -1%;
+}
+  
+.popup__closeButton {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+  
+.popup__imgButton {
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
+}
+  
+.popup__cards {
+  margin: 0;
+  padding: 0;
+  height: 284px
+}
+
+.popup__addresses{
+  margin: 0;
+  padding: 0;
+  height: 189px
+}
+  
+.popup__item {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.popup__item_type_chooseDelivery{
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+  
+.popup__input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  padding-right: 10px;
+}
+  
+.popup__label {
+  margin: 0;
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: normal;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  position: relative;
+  cursor: pointer;
+  padding-top: -4px;
+  padding-left: 30px;
+} 
+  
+.popup__label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba(0, 0, 0, .2);
+  background-color: #F6F6FA;
+  border-radius: 8px;
+}
+  
+.popup__label:hover::before {
+  border-color: rgba(0, 0, 0);
+}
+  
+.popup__input:checked + .popup__label::before {
+  background-color: #CB11AB;
+  border-color: #CB11AB;
+  background-image: url("../img/dot.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+  
+.popup__imgCard {
+  height: 24px;
+  width: 32px;
+  object-fit: contain;
+  margin-right: 3px;
+}
+  
+.popup__cardNumber {
+  margin: 0;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: normal;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+  
+.popup__button {
+  width: 164px;
+  height: 44px;
+  border-radius: 8px;
+  background-color: #CB11AB;
+  color: white;
+  border: 0;
+  margin: 0;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: bold;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  cursor: pointer;
+}
+  
+.popup__button:hover {
+  background-color: hsla(310, 85%, 43%, 0.45);
+}
+  
+  /* Специфичные стили для попапа выбора доставки */
+.popup__chooseDelivery {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  padding-bottom: 24px;
+}
+
+.popup__chooseDeliveryButton{
+  display: none;
+}
+
+.popup__chooseDeliveryLabel{
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  height: 36px;
+  border: 2px solid hsla(310, 85%, 43%, 0.15);
+  border-radius: 18px;
+  
+    
+  font-size: 13px;
+  line-height: 36px;
+  font-weight: bold;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  
+  cursor: pointer;
+}
+  
+.popup__chooseDeliveryButton:hover + .popup__chooseDeliveryLabel{
+  border-color: #CB11AB;
+}
+
+.popup__chooseDeliveryButton:checked + .popup__chooseDeliveryLabel{
+  color: #fff;
+  background-color: #CB11AB;
+  border-color: #CB11AB;
+}
+
+.popup__chooseDeliveryTitle{
+  margin: 0;
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: bold;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  
+  margin-bottom: 12px;
+}
+
+
+.popup__addressesCont_is_hidden{
+  display: none;
+}
+  
+.popup__itemContainer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+  
+.popup__deleteButton{
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  width: 15px;
+  height: 16px;
+
+  background-image: url('../img/buttonTrash2.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+}
+  
+.popup__deleteButton:hover{
+  background-image: url('../img/buttonTrash2Active.svg');
+}
+
+.popup__address{
+  margin: 0;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: normal;
+  font-family: 'Segoe UI', Arial, sans-serif;
+
+  font-style: normal;
+}

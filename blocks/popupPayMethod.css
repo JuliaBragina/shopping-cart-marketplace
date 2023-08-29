@@ -1,0 +1,157 @@
+.popupPayMethod{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: hsla(270, 100%, 2%, 0.3);
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+
+.popupPayMethod_is_hidden{
+  display: flex;
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+
+.popupPayMethod__form{
+  position: relative;
+  width: 400px;
+  height: 408px;
+  border-radius: 16px;
+  background-color: white;
+}
+
+.payMethod__formContainer{
+  padding: 16px 22px 22px 24px;
+}
+
+.popupPayMethod__titleConttainer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 13px;
+}
+
+.popupPayMethod__title{
+  margin: 0;
+
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: bold;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  letter-spacing: -1%;
+}
+
+.popupPayMethod__closeButton{
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.popupPayMethod__imgButton{
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
+}
+
+.popupPayMethod__cards{
+  margin: 0;
+  padding: 0;
+  margin-bottom: 132px;
+}
+
+.popupPayMethod__item{
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  margin-bottom: 13px;
+}
+
+.popupPayMethod__input{
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  padding-right: 10px;
+}
+  
+.popupPayMethod__label{
+  margin: 0;
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: normal;
+  font-family: 'Segoe UI', Arial, sans-serif;
+
+  position: relative;
+  cursor: pointer;
+  padding-top: -4px;
+  padding-left: 30px;
+}
+    
+.popupPayMethod__label::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba(0, 0, 0, .2);
+  background-color: #F6F6FA;
+  border-radius: 8px;
+}
+
+.popupPayMethod__label:hover::before {
+  border-color: rgba(0, 0, 0);
+}
+
+.popupPayMethod__input:checked + .popupPayMethod__label::before {
+  background-color: #CB11AB;
+  border-color: #CB11AB;
+  background-image: url("../img/dot.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.popupPayMethod__imgCard{
+  height: 24px;
+  width: 32px;
+  object-fit: contain;
+  margin-right: 3px;
+}
+
+.popupPayMethod__cardNumber{
+  margin: 0;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: normal;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.popupPayMethod__button{
+  width: 164px;
+  height: 44px;
+  border-radius: 8px;
+  background-color: #CB11AB;
+  color: white;
+  border: 0;
+
+  margin: 0;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: bold;
+  font-family: 'Segoe UI', Arial, sans-serif;
+
+  cursor: pointer;
+}
+
+.popupPayMethod__button:hover{
+  background-color: hsla(310, 85%, 43%, 0.45);
+}
+

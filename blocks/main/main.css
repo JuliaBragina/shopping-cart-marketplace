@@ -1,0 +1,488 @@
+.main__title, .main__description, .main__descriptionPrice, .main__subTitle, .main__deliveryTime, .main__infoparagraph, .main__cardNumber, .main__cardSize, .main__depot{
+  margin: 0;
+}
+
+.main{
+  background-color: #F6F6FA;
+  color: black;
+  border-radius: 18px;
+}
+
+.main__cards_is_hidden{
+  display: none;
+}
+
+.main__container{
+  padding-top: 24px;
+  position: relative;
+}
+
+.main__basket{
+  width: 65.9%;
+}
+
+.main__title{
+  padding: 10px 0 26px 0;
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: bold;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.main__accordeonSection{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  position: relative;
+  margin-bottom: 17px;
+}
+
+.main__accordeonSection::after{
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, .1);
+  height: 0;
+  top: 40px;
+  left: 0;
+}
+
+/*Карточки в корзине*/
+
+.main__cards{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.main__card{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: max-content;
+  margin-bottom: 20px;
+}
+
+.main__cardDescription{
+  padding-top: 12px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.main__cardProperty{
+  width: 275px;
+}
+
+.main__cardImg{
+  width: 72px;
+  height: 96px;
+  object-fit: contain;
+  margin: 0 15px 0 6px;
+}
+
+.main__cardName{
+  margin: 0;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: normal;
+  font-family: 'Segoe UI', Arial, sans-serif;
+
+  margin-bottom: 6px;
+}
+
+.main__cardSize_is_Hidden{
+  display: none; 
+}
+
+.main__cardSizeColor{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.main__cardSizeColor_is_Hidden{
+  display: none;
+}
+
+.main__cardColor, .main__cardSize{
+  margin: 0;
+
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: normal;
+  font-family: 'Segoe UI', Arial, sans-serif;
+
+  margin-right: 17px;
+}
+
+.main__storage, .main__seller{
+  margin: 0;
+
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: normal;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #A0A0A4;
+}
+
+.main__storage{ 
+  margin-bottom: 4px;
+}
+
+.main__sellerContainer{
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+}
+
+.main__seller{
+  margin-right: 8px;
+}
+
+.main__sellerImg{
+  height: 20px;
+  width: 20px;
+  object-fit: contain;
+
+  cursor: pointer;
+}
+
+.main__cardPrice{
+  padding-top: 9px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 226px
+}
+
+.main__counter{
+  height: 44px;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 9px;
+}
+
+.main__counterButton{
+  padding: 0;
+  margin: 0;
+  width: 25px;
+  height: 100%;
+  background-color: white;
+  border: 0;
+  cursor: pointer;
+}
+
+.main__counterButton_is_left{
+  border-radius: 8px 0 0 8px;
+  background-image: url('../../img/buttonMinus.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.main__counterButton_is_left:hover{
+  background-color: #F6F6FA;
+}
+
+.main__counterButton_is_right{
+  border-radius: 0 8px 8px 0;
+  background-image: url('../../img/buttonPlus.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.main__counterButton_is_right:hover{
+  background-color: #F6F6FA;
+}
+
+.main__counterInput{
+  border: 0;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  width: 50px;
+  height: 100%;
+
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: normal;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.main__buttonLikeDelete{
+  background-color: transparent;
+  border: 0;
+  height: 20px;
+  width: 20px;
+  background-repeat: no-repeat;
+  padding: 0;
+  cursor: pointer;
+}
+
+.main__goodsQuantity{
+  margin: 0;
+  margin-bottom: 10px;
+
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: normal;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #FF3B30;
+}
+
+.main__buttons{ 
+  padding-left: 42px;
+}
+
+.main__buttonLikeDelete_is_like{
+  margin-right: 15px;
+  background-image: url('../../img/buttonLike.svg');
+}
+
+.main__buttonLikeDelete_is_like:hover{
+  background-image: url('../../img/buttonLikeActive.svg');
+}
+
+.main__buttonLikeDelete_is_delete{
+  background-image: url('../../img/buttonTrash2.svg');
+}
+
+.main__buttonLikeDelete_is_delete:hover{
+  background-image: url('../../img/buttonTrash2Active.svg');
+}
+
+.main__goodsCounter{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.main__goodsPrice{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.main__goodsPriceSell{
+  margin: 0;
+  margin-bottom: 5px;
+
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: bold;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.main__goodsPriceSell_is_small{
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: bold;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.main__goodsPriceNoSell{
+  margin: 0;
+  
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: normal;
+  font-family: 'Segoe UI', Arial, sans-serif;
+
+  color: #A0A0A4;
+  border-bottom: 1px dashed #A0A0A4;
+  text-decoration: line-through;
+
+  cursor: pointer;
+}
+
+.main__payStartInput {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  padding-right: 10px;
+}
+
+.main__payStart{
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: normal;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+  
+.main__payStart_is_main{
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: normal;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.main__payStartInput:checked + .main__payStart::before {
+  background-color: #CB11AB;
+  border-color: #CB11AB;
+  background-image: url("../../img/checkbox.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.main__payStart{
+  position: relative;
+  cursor: pointer;
+  padding-left: 30px;
+}
+  
+.main__payStart::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  border: 1px solid rgba(0, 0, 0, .2);
+  background-color: #F6F6FA;
+  border-radius: 5px;
+}
+  
+.main__payStart:hover::before {
+  border-color: rgba(0, 0, 0);
+}
+
+.main__payStartWrapper_is_cards{
+  padding-top: 40px;
+}
+  
+.main__payStartWrapper_is_main{
+  padding-left: 5px;
+}
+
+.main__payStartWrapper_is_hidden{
+  display: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .main__aside{
+    width: 31.1%;
+    right: 4px;
+  }
+
+  .main__price{
+    width: 82.8%;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .main__cardProperty {
+    width: 215px;
+  }
+}
+
+@media screen and (max-width: 890px) {
+  .main__basket {
+    width: 100%;
+  }
+
+  .main__container{
+    flex-direction: column;
+  }
+
+  .main__point_is_hidden{
+    display: none;
+  }
+
+  .main__aside{
+    position:initial;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .main__container{
+    padding-top: 3px;
+  }
+
+  .main__title{
+    padding: 10px 0 16px 0;
+  }
+
+  .main__title{
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    letter-spacing: 1%;
+  }
+
+  .main__cardPrice{
+    width: 100%;
+  }
+  
+  .main__card{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .main__cardDescription{
+    padding-bottom: 12px;
+  }
+
+  .main__goodsCounter{
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .main__goodsPrice{
+    display: none;
+  }
+
+  .main__goodsQuantity{
+    margin-bottom: 5px;
+    margin-right: 8px;
+  }
+
+  .main__buttons{
+    margin: 0;
+    padding: 0;
+  }
+
+  .main__cardImg{
+    margin-left: -27px;
+    width: 80px;
+    height: 106px;
+  }
+
+  .main__payStartWrapper_is_cards{
+    padding: 0;
+  }
+
+  .main__payStart_is_cards{
+    left: 6px;
+    top: 4px;
+  }
+
+  .main__buttonLikeDelete_is_like{
+    margin-right: 22px;
+  }
+
+  .main__buttonLikeDelete_is_delete{
+    margin-right: 15px;
+  }
+
+  .main__counter{
+    height: 32px;
+    width: 80px;
+    display: flex;
+    margin-bottom: 8px;
+  }
+
+  .main__cardName, .main__counterInput{
+    font-size: 14px;
+    line-height: 20px;
+  }
+  
+}

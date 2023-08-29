@@ -1,0 +1,10 @@
+.root{
+  margin: 0 auto;
+  max-width: 1400px;
+  min-width: 320px;
+  background-color: #6725A8;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  color: #fff;
+}

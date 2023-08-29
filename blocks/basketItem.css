@@ -1,0 +1,290 @@
+.basketItem__title, .basketItem__itemTitle, .basketItem__timeOfWork, .basketItem__priceDelivery, .basketItem__cardNumber, .basketItem__expareDate, .basketItem__information{
+  margin: 0;
+}
+
+.basketItem{
+  background-color: white;
+  border-radius: 16px;
+  margin-bottom: 16px;
+}
+
+.basketItem__title{
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: bold;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.basketItem__title{
+  padding-bottom: 16px;
+}
+
+.basketItem__itemTitle{
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.basketItem__address, .basketItem__priceDelivery, .basketItem__cardNumber, .basketItem__expareDate, .basketItem__label{
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: normal;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  font-style: normal;
+}
+
+.basketItem__editButton{
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: bold;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.basketItem__ratingNum, .basketItem__timeOfWork, .basketItem__information{
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: normal;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.basketItem__description{
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: normal;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.basketItem__ratingImg{
+  width: 11px;
+  height: 11px;
+  background-image: url('../img/imgRating.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.basketItem__container{
+  width: 94.6%;
+  margin: 0 auto;
+  padding: 16px 0 8px 0;
+}
+
+.basketItem__changebasketItem{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.basketItem__editButton{
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+  color: #CB11AB;
+  cursor: pointer;
+}
+
+.basketItem__item{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 26px;
+  margin-bottom: 16px;
+}
+
+.basketItem__itemTitle{
+  flex-basis: 159px;
+}
+
+.basketItem__descriptionPointOfIssue{
+  width: 178px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.basketItem__goodsImg{
+  width: 40px;
+  height: 56px;
+  object-fit: cover;
+  margin-right: 5px;
+}
+
+.basketItem__payMethod{
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.basketItem__imgCard{
+  width: 30px;
+  height: 10px;
+  object-fit: contain;
+  margin-right: 8px;
+}
+
+.basketItem__cardNumber{
+  margin-right: 8px;
+}
+
+.basketItem__form{
+  margin-top: 24px;
+  width: 85.6%;
+}
+
+.basketItem__fields{
+  display: flex;
+  margin-bottom: 26px;
+}
+
+.basketItem__fields_is_firstField{
+  width: calc(100%/2 - 24px);
+}
+
+.basketItem__fields_is_secondField{
+  width: calc(100%/3 - 24px);
+}
+
+.basketItem__fields:last-child{
+  margin-bottom: 0;
+}
+
+.basketItem__field{
+  position: relative;
+  margin-right: 24px;
+}
+
+.basketItem__field:last-child{
+  margin-right: 0;
+}
+
+.basketItem__input{
+  display: block;
+  border: none;
+  border-bottom: 1px solid #A0A0A4;
+  width: 100%;
+
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: normal;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.basketItem__input_type_invalid{
+  border-bottom: 1px solid #F55123;
+  color: #F55123;
+}
+
+.basketItem__input:focus{ 
+  outline: none;
+}
+
+.basketItem__label{
+  position: absolute;
+  pointer-events: none;
+  left: 0;
+  top: -5px;
+  transition: 0.2s ease all;
+  color: #A0A0A4;
+}
+
+.basketItem__inpuError{
+  display: block;
+  width: fit-content;
+  height: 16px;
+  margin: 0;
+
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: normal;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #F55123;
+
+  visibility: hidden;
+}
+
+.basketItem__inpuError_active{
+  visibility: visible;
+}
+
+.basketItem__input:focus ~ .basketItem__label {
+  top: -25px;
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: normal;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.basketItem__input:not(:placeholder-shown) ~ .basketItem__label {
+  top: -25px;
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: normal;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+
+@media screen and (max-width: 1024px) {
+  .basketItem__container{
+    width: 91.9%;
+  }
+
+  .basketItem__form{
+    width: 100%;
+  }
+
+  .basketItem__fields_is_firstField{
+    width: 100%;
+  }
+  
+  .basketItem__fields_is_secondField{
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .basketItem__item{
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .basketItem__itemTitle{
+    flex-basis: 0;
+  }
+
+  .basketItem__title{
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    letter-spacing: 1%;
+
+    padding-bottom: 8px;
+  }
+
+
+  .basketItem__title_size_mobile{
+    padding-bottom: 26px;
+  }
+
+  .basketItem__goodsDelivery{
+    padding-top: 10px;
+  }
+
+  .basketItem__form{
+    margin: 0;
+  }
+
+  .basketItem__fields{
+    margin: 0;
+    flex-direction: column;
+  }
+
+  .basketItem__field{
+    margin: 0;
+    margin-bottom: 51px;
+  }
+
+  .basketItem__field:last-child{
+    margin: 0;
+  }
+}

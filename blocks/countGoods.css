@@ -1,0 +1,20 @@
+.countGoods{
+  position: absolute;
+  top: -6px;
+  left: 32px;
+  width: 16px;
+  height: 16px;
+  background-color: #F55123;
+  border-radius: 16px;
+}
+
+.countGoods__count{
+  display: block;
+  text-align: center;
+
+  font-size: 10px;
+  line-height: 18px;
+  font-weight: normal;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color:rgb(255, 255, 255);
+}

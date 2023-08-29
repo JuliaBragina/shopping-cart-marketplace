@@ -1,0 +1,248 @@
+.header{
+  height: 88px;
+}
+
+.header__container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 16px;
+}
+
+.header__burgerButtonContainer{
+  width: 170px;
+  height: 56px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__burgerButton{
+  position: relative;
+  padding: 0;
+  width: 28px;
+  height: 24px;
+  object-fit: contain;
+  background-color: transparent;
+  background-image: url('../../img/burgerButton.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 0;
+  margin: 10px;
+  cursor: pointer;
+  outline: none;
+}
+
+.header__burgerButton::after{
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  width: 48px;
+  height: 44px;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 8px;
+}
+
+.header__burgerButton:hover::after{
+  border: 1px solid rgb(255, 255, 255);
+}
+
+.header__title{
+  width: 106px;
+  margin: 0;
+  font-size: 22px;
+  line-height: 24px;
+  font-weight: 600;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  letter-spacing: 2%;
+}
+
+.header__searchForm{
+  background-color: rgba(255, 255, 255, 0.2);
+  height: 48px;
+  width: 71.8%;
+  border-radius: 36px;
+  position: relative;
+}
+
+.header__searchForm:hover{
+  background-color: rgba(255, 255, 255, 0.4);
+  transition: 0.2s ease all;
+}
+
+.header__searchContainer{
+  position: relative;
+  height: 24px;
+}
+
+.header__searchInput{
+  padding: 0;
+  background-color: transparent;
+  border: none;
+
+  width: 64.1%;
+  height: 24px;
+  display: block;
+
+  position: absolute;
+  left: 20px;
+  top: 10px;
+}
+
+.header__searchInput:focus{
+  outline: none;
+}
+
+.header__searchLabel{
+  position: absolute;
+  left: 20px;
+  top: 10px;
+  pointer-events: none;
+  transition: 0.2s ease all;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: normal;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color:rgba(255, 255, 255, .5);
+}
+
+.header__searchInput:focus ~ .header__searchLabel {
+  font-size: 0;
+}
+
+.header__searchButton{
+  position: absolute;
+  top: 10px;
+  right: 21px;
+  padding: 0;
+  border: 0;
+
+  background-image: url('../../img/buttonSearch.svg');
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+  object-fit: contain;
+
+  cursor: pointer;
+}
+
+.header__searchButton_is_hidden{
+  display: none;
+}
+
+.header__profile{
+  width: 145px;
+  height: 56px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__basketCount{
+  position: relative;
+}
+
+.header__profileButton{
+  padding: 0;
+  background-color: transparent;
+  border: 0;
+  margin-right: 36px;
+
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: normal;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color:rgb(255, 255, 255);
+
+  cursor: pointer;
+}
+
+.header__profileButton:last-child{
+  margin-right: 0;
+}
+
+.header__profileImg{
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  padding-bottom: 3px;
+}
+
+@media screen and (max-width: 1024px) {
+  .header__searchForm{
+    width: 60.3%;
+  }
+
+  .header__searchInput{
+    width: 85.3%;
+  }
+
+  .header__profileButton:first-child{
+    margin-right: 35px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header__burgerButton{
+    background-image: url('../../img/burgerButtonMobile.svg');
+    width: 28px;
+    height: 28px;
+    margin: 0;
+  }
+
+  .header__burgerButton::after{
+    border: 0;
+  }
+
+  .header__burgerButton:hover::after{
+    border: 0;
+  }
+
+  .header__searchInput{
+    width: 73.3%;
+  }
+
+  .header__profile{
+    display: none;
+  }
+
+  .header__profileButton:first-child{
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .header{
+    height: 57px;
+  }
+
+  .header__container{
+    padding-top: 0;
+  }
+
+  .header__burgerButtonContainer{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header__searchForm{
+    display: none;
+  }
+    
+  .header__searchButton{
+     display: block;
+     position: initial;
+  }
+
+  .header__title{
+    width: max-content;
+  }
+}

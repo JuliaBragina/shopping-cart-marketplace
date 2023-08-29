@@ -1,0 +1,94 @@
+.popupChooseDelivery__adressesCont_is_hidden{
+  display: none;
+}
+
+.popupChooseDelivery__form{
+  position: relative;
+  width: 500px;
+  height: 408px;
+  border-radius: 16px;
+  background-color: white;
+}
+
+.popupChooseDelivery__chooseDelivery{
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+
+  padding-bottom: 24px;
+}
+
+.popupChooseDelivery__button{
+  display: none;
+}
+
+.popupChooseDelivery__label{
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  height: 36px;
+  border: 2px solid hsla(310, 85%, 43%, 0.15);
+  border-radius: 18px;
+
+  
+  font-size: 13px;
+  line-height: 36px;
+  font-weight: bold;
+  font-family: 'Segoe UI', Arial, sans-serif;
+
+  cursor: pointer;
+}
+
+.popupChooseDelivery__button:hover + .popupChooseDelivery__label{
+  border-color: #CB11AB;
+}
+
+.popupChooseDelivery__button:checked + .popupChooseDelivery__label{
+  color: #fff;
+  background-color: #CB11AB;
+  border-color: #CB11AB;
+}
+
+.popupChooseDelivery__title{
+  margin: 0;
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: bold;
+  font-family: 'Segoe UI', Arial, sans-serif;
+
+  margin-bottom: 12px;
+}
+
+.popupChooseDelivery__item{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.popupChooseDelivery__itemCintainer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.popupChooseDelivery__deleteButton{
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  width: 15px;
+  height: 16px;
+
+  background-image: url('../img/buttonTrash2.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.popupChooseDelivery__deleteButton:hover{
+  background-image: url('../img/buttonTrash2Active.svg');
+}
+
+.popupChooseDelivery__buttonutton{
+  margin-bottom: 33px;
+}

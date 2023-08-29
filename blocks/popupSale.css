@@ -1,0 +1,54 @@
+.popupSale{
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  background-color: white;
+  height: 64px;
+  width: 238px;
+  border-radius: 8px;
+
+  box-shadow: 0px 0px 15px 0px rgba(0,0,0,.2);
+}
+
+.popupSale_is_hidden{
+  display: none;
+}
+  
+.popupSale__container{
+  width: 88.6%;
+  margin: 0 auto;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.popupSale__saleItem{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.popupSale__saleItem:last-child{
+  margin-bottom: 0;
+}
+
+.popupSale__sale{
+  margin: 0;
+ 
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: normal;
+  font-family: 'Segoe UI', Arial, sans-serif;
+
+  color: #A0A0A4;
+}
+
+.popupSale__price{
+  margin: 0;
+ 
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: normal;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+  

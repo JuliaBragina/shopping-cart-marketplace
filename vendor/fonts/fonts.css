@@ -1,0 +1,51 @@
+@font-face {
+  font-family: 'Inter';
+  font-style:  normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("Inter-Regular.woff2") format("woff2"),
+       url("Inter-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style:  normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("Inter-Bold.woff2") format("woff2"),
+       url("Inter-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style:  normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("Inter-Black.woff2") format("woff2"),
+       url("Inter-Black.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Segoe UI';
+  font-style: normal;
+  font-weight: 600;
+  src: url('SegoeUI-SemiBold.woff2') format('woff2'),
+       url('SegoeUI-SemiBold.woff') format('woff'),
+}
+
+@font-face {
+  font-family: 'Segoe UI';
+  font-style: normal;
+  font-weight: normal;
+  src: url('SegoeUI.woff2') format('woff2'),
+       url('SegoeUI.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Segoe UI';
+  font-weight: bold;
+  font-style: normal;
+  src:url('SegoeUI-Bold.woff2') format('woff2'),
+      url('SegoeUI-Bold.woff') format('woff'),
+      url('SegoeUI-Bold.ttf') format('truetype');
+}
