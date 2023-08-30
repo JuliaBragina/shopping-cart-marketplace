@@ -1,17 +1,34 @@
 const main = document.querySelector('.main');
 const mainCards = main.querySelector('.main__cards');
+const mainCards1 = main.querySelector('.main__cards_exict');
+const mainCards2 = main.querySelector('.main__cards_dontExict');
 const mainSellerImg = mainCards.querySelectorAll('.main__sellerImg');
 const orderDetails = main.querySelectorAll('.order-details__infoPrice');
 const priceSell = main.querySelectorAll('.main__goodsPriceNoSell');
 
-const checkBoxAll = document.querySelector('.main__payStartWrapper');
-const accordeonBoxAll = document.querySelector('.accordeon__info');
+const checkBoxAll = document.querySelector('.main__checkboxContainer_mainCheckbox');
+const accordeonBoxAll = document.querySelector('.accordeon__info_goods');
+const accordeonBoxAll2 = document.querySelector('.accordeon__info_dontExist');
 
 const popupSeller = document.querySelector('.popupSeller');
 const popupSale = document.querySelector('.popupSale');
 const popupOrder = document.querySelector('.popupOrder');
 
-const accordeonSection = main.querySelector('.accordeon__icon');
+const accordeonSection = main.querySelector('.accordeon__icon_existGoods');
+const accordeonSection2 = main.querySelector('.accordeon__icon_dontExistGoods');
+
+accordeonSection.addEventListener('click', () => {
+  mainCards1.classList.toggle('main__cards_is_hidden');
+  accordeonSection.classList.toggle('accordeon__icon_is_closed');
+  checkBoxAll.classList.toggle('main__payStartWrapper_is_hidden');
+  accordeonBoxAll.classList.toggle('accordeon__info_is_hidden');
+});
+
+accordeonSection2.addEventListener('click', () => {
+  mainCards2.classList.toggle('main__cards_is_hidden');
+  accordeonSection2.classList.toggle('accordeon__icon_is_closed');
+});
+
 
 const editPayMetgod = document.querySelector('.payMethod__editButton');
 const editPayMetgod2 = document.querySelector('.order-details__payMethod');
@@ -34,11 +51,17 @@ const pickupAddress = document.querySelector('.popup__addressesCont_by_pickPoint
 document.addEventListener('DOMContentLoaded', () => {
   mainSellerImg.forEach(function (element) {
     element.addEventListener('mouseover', () => {
-      popupSeller.classList.remove('popupSeller_is_hidden');
-    });
-     
-    element.addEventListener('mouseout', () => {
-      popupSeller.classList.add('popupSeller_is_hidden');
+      if (popupSeller.style.display === 'none' || popupSeller.style.display === '') {
+        const buttonRect = element.getBoundingClientRect();
+        popupSeller.style.display = 'block';
+        popupSeller.style.top = buttonRect.bottom + 'px';
+        popupSeller.style.left = buttonRect.left + 'px';
+
+        console.log(buttonRect.top, buttonRect.left);
+      } else {
+        // Скрыть попап
+        popupSeller.style.display = 'none';
+      }
     });
   });
 });
@@ -65,13 +88,6 @@ document.addEventListener('DOMContentLoaded', () => {
       popupOrder.classList.add('popupOrder_is_hidden');
     });
   });
-});
-  
-accordeonSection.addEventListener('click', () => {
-  mainCards.classList.toggle('main__cards_is_hidden');
-  accordeonSection.classList.toggle('accordeon__icon_is_closed');
-  checkBoxAll.classList.toggle('main__payStartWrapper_is_hidden');
-  accordeonBoxAll.classList.toggle('accordeon__info_is_hidden');
 });
 
 editPayMetgod.addEventListener('click', ()=> {

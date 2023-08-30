@@ -5,7 +5,8 @@
 .basketItem{
   background-color: white;
   border-radius: 16px;
-  margin-bottom: 16px;
+  padding: 16px 0 23px 0;
+  margin-bottom: 19px;
 }
 
 .basketItem__title{
@@ -66,7 +67,6 @@
 .basketItem__container{
   width: 94.6%;
   margin: 0 auto;
-  padding: 16px 0 8px 0;
 }
 
 .basketItem__changebasketItem{
@@ -127,7 +127,7 @@
 }
 
 .basketItem__form{
-  margin-top: 24px;
+  padding-top: 16px;
   width: 85.6%;
 }
 
@@ -246,6 +246,8 @@
     flex-direction: column;
     gap: 0;
   }
+
+
 
   .basketItem__itemTitle{
     flex-basis: 0;
