@@ -139,6 +139,10 @@
   padding-top: 10px;
 }
 
+.order-details__infoPay_is_hidden{
+  display: none;
+}
+
 .order-details__paySystem{
   display: flex;
   align-items: center;
@@ -262,6 +266,7 @@
 
   .order-details__container{
     width: 98%;
+    padding-bottom: 0;
   }
 
   .order-details__price{

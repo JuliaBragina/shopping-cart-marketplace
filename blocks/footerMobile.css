@@ -1,0 +1,44 @@
+.footerMobile{
+  display: none;
+
+  background-color: white;
+  height: 56px;
+}
+
+.footerMobile__navigation{
+  width: 91.9%;
+  margin: 0 auto;
+  padding-top: 16px;
+}
+
+.footerMobile__items{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.footerMobile__img{
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.footerMobile_coutCartMobile{
+  top: -3px;
+  right: -7px;
+}
+
+.footerMobile__cartContainer{
+  position: relative;
+}
+
+@media screen and (max-width: 890px) {
+  .footerMobile{
+    display: block;
+  }
+}

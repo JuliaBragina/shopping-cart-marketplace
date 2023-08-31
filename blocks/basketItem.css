@@ -102,6 +102,21 @@
   justify-content: space-between;
 }
 
+.basketItem__goodsDelivery{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.basketItem__goodsCount{
+  position: relative;
+}
+
+.basketItem__countGoods{
+  top: -7px;
+  right: -1px;
+}
+
 .basketItem__goodsImg{
   width: 40px;
   height: 56px;
@@ -247,8 +262,6 @@
     gap: 0;
   }
 
-
-
   .basketItem__itemTitle{
     flex-basis: 0;
   }
@@ -285,8 +298,8 @@
     margin: 0;
     margin-bottom: 51px;
   }
-
-  .basketItem__field:last-child{
+  .basketItem__fields_is_secondField:last-of-type{
     margin: 0;
   }
+  
 }

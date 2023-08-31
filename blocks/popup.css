@@ -253,3 +253,19 @@
 
   font-style: normal;
 }
+
+
+@media screen and (max-width: 425px) {
+  .popup__form {
+    width: 100%;
+    height: 100%;
+  }
+
+  .popup__addresses{
+    height: 521px;
+  }
+
+  .popup__cards{
+    height: 610px;
+  }
+}

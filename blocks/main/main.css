@@ -94,8 +94,18 @@
   align-items: flex-start;
 }
 
+.main__cardDescription_dontExist{
+  opacity: .6;
+  filter: grayscale(100%);
+}
+
 .main__cardProperty{
   width: 320px;
+}
+
+.main__cardLink{
+  text-decoration: none;
+  color: black;
 }
 
 .main__cardName{
@@ -406,6 +416,14 @@
   display: none;
 }
 
+.main__buttonLikeDelete_goodsDontExist{
+  visibility: hidden;
+}
+
+.main__buttons:hover > .main__buttonLikeDelete_goodsDontExist {
+  visibility: visible;
+}
+
 @media screen and (max-width: 1024px) {
   .main__container{
     width: 95.4%;
@@ -616,7 +634,7 @@
   .main__cardName{
     overflow: hidden;
     display: -webkit-box;
-    -webkit-line-clamp: 2; /* number of lines to show */
+    -webkit-line-clamp: 2;
             line-clamp: 2;
     -webkit-box-orient: vertical;
   }
