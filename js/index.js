@@ -1,10 +1,11 @@
 const main = document.querySelector('.main');
-const mainCards = main.querySelector('.main__cards');
-const mainCards1 = main.querySelector('.main__cards_exict');
-const mainCards2 = main.querySelector('.main__cards_dontExict');
-const mainSellerImg = mainCards.querySelectorAll('.main__sellerImg');
-const orderDetails = main.querySelectorAll('.order-details__infoPrice');
-const priceSell = main.querySelectorAll('.main__goodsPriceNoSell');
+const mainCardsExist = document.querySelector('.main__cards_exict');
+const mainCardsDontExist = document.querySelector('.main__cards_dontExict');
+
+const mainCards = document.querySelector('.main__cards');
+const mainSellerImg = document.querySelectorAll('.main__sellerImg');
+const orderDetails = document.querySelectorAll('.order-details__infoPrice');
+const priceSell = document.querySelectorAll('.main__goodsPriceNoSell');
 
 const checkBoxAll = document.querySelector('.main__checkboxContainer_mainCheckbox');
 const accordeonBoxAll = document.querySelector('.accordeon__info_goods');
@@ -14,24 +15,11 @@ const popupSeller = document.querySelector('.popupSeller');
 const popupSale = document.querySelector('.popupSale');
 const popupOrder = document.querySelector('.popupOrder');
 
-const accordeonSection = main.querySelector('.accordeon__icon_existGoods');
-const accordeonSection2 = main.querySelector('.accordeon__icon_dontExistGoods');
+const accordeonSection = document.querySelector('.accordeon__icon_existGoods');
+const accordeonSectionDontExictGoods = document.querySelector('.accordeon__icon_dontExistGoods');
 
-accordeonSection.addEventListener('click', () => {
-  mainCards1.classList.toggle('main__cards_is_hidden');
-  accordeonSection.classList.toggle('accordeon__icon_is_closed');
-  checkBoxAll.classList.toggle('main__payStartWrapper_is_hidden');
-  accordeonBoxAll.classList.toggle('accordeon__info_is_hidden');
-});
-
-accordeonSection2.addEventListener('click', () => {
-  mainCards2.classList.toggle('main__cards_is_hidden');
-  accordeonSection2.classList.toggle('accordeon__icon_is_closed');
-});
-
-
-const editPayMetgod = document.querySelector('.payMethod__editButton');
-const editPayMetgod2 = document.querySelector('.order-details__payMethod');
+const editPayMetod = document.querySelector('.payMethod__editButton');
+const editPayMetod2 = document.querySelector('.order-details__payMethod');
 
 const popupPayMethod = document.querySelector('.popupPayMethod');
 const popupPayMethodClose = popupPayMethod.querySelector('.popupPayMethod__closeButton');
@@ -42,59 +30,56 @@ const editChooseDelivery2 = document.querySelector('.order-details__choodeDelive
 const popupChooseDelivery = document.querySelector('.popupChooseDelivery');
 const popupChooseDeliveryClose = popupChooseDelivery.querySelector('.popupChooseDelivery__closeButton');
 
-// Получаем ссылки на элементы
 const courierOption = document.getElementById('courierOption');
 const pickupOption = document.getElementById('pickupOption');
 const courierAddress = document.querySelector('.popup__addressesCont_by_courier');
 const pickupAddress = document.querySelector('.popup__addressesCont_by_pickPoint');
 
+// Обработчики событий для раскрывающихся секций (аккордеонов)
+accordeonSection.addEventListener('click', () => {
+  mainCardsExist.classList.toggle('main__cards_is_hidden');
+  accordeonSection.classList.toggle('accordeon__icon_is_closed');
+  checkBoxAll.classList.toggle('main__payStartWrapper_is_hidden');
+  accordeonBoxAll.classList.toggle('accordeon__info_is_hidden');
+});
+
+accordeonSectionDontExictGoods.addEventListener('click', () => {
+  mainCardsDontExist.classList.toggle('main__cards_is_hidden');
+  accordeonSectionDontExictGoods.classList.toggle('accordeon__icon_is_closed');
+});
+
+// Обработчики событий для отображения попапов при клике на изображения
 document.addEventListener('DOMContentLoaded', () => {
   mainSellerImg.forEach(function (element) {
-    element.addEventListener('mouseover', () => {
-      if (popupSeller.style.display === 'none' || popupSeller.style.display === '') {
-        const buttonRect = element.getBoundingClientRect();
-        popupSeller.style.display = 'block';
-        popupSeller.style.top = buttonRect.bottom + 'px';
-        popupSeller.style.left = buttonRect.left + 'px';
+    element.addEventListener('click', () => {
+      element.nextSibling.nextSibling.classList.toggle('popupSeller_is_hidden');
+    })
+  });
+});
 
-        console.log(buttonRect.top, buttonRect.left);
-      } else {
-        // Скрыть попап
-        popupSeller.style.display = 'none';
-      }
+document.addEventListener('DOMContentLoaded', () => {
+  priceSell.forEach(function (element) {
+    element.addEventListener('click', () => {
+      element.nextSibling.nextSibling.classList.toggle('popupSale_is_hidden');
     });
   });
 });
 
 document.addEventListener('DOMContentLoaded', () => {
   orderDetails.forEach(function (element) {
-    element.addEventListener('mouseover', () => {
-      popupSale.classList.remove('popupSale_is_hidden');
-    });
-     
-    element.addEventListener('mouseout', () => {
-      popupSale.classList.add('popupSale_is_hidden');
+    element.addEventListener('click', () => {
+      console.log(element, element.parentNode, element.parentNode.childNodes)
+      element.parentNode.nextSibling.nextSibling.classList.toggle('popupOrder_is_hidden');
     });
   });
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-    priceSell.forEach(function (element) {
-    element.addEventListener('mouseover', () => {
-      popupOrder.classList.remove('popupOrder_is_hidden');
-    });
-       
-    element.addEventListener('mouseout', () => {
-      popupOrder.classList.add('popupOrder_is_hidden');
-    });
-  });
-});
-
-editPayMetgod.addEventListener('click', ()=> {
+// Обработчики событий для отображения попапов при клике на кнопки редактирования
+editPayMetod.addEventListener('click', ()=> {
   popupPayMethod.classList.toggle('popup_is_hidden');
 });
 
-editPayMetgod2.addEventListener('click', ()=> {
+editPayMetod2.addEventListener('click', ()=> {
   popupPayMethod.classList.toggle('popup_is_hidden');
 });
 
@@ -114,7 +99,7 @@ popupChooseDeliveryClose.addEventListener('click', ()=> {
   popupChooseDelivery.classList.toggle('popup_is_hidden');
 });
 
-// Добавляем обработчики событий на изменение выбора
+// Обработчики событий на изменение выбора
 courierOption.addEventListener('change', ()=> {
   if (courierOption.checked) {
     pickupAddress.classList.remove('popup__addressesCont_is_hidden');
@@ -128,5 +113,3 @@ pickupOption.addEventListener('change', ()=> {
     pickupAddress.classList.add('popup__addressesCont_is_hidden');
   }
 });
-
-

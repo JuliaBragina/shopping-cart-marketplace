@@ -3,6 +3,7 @@
 }
 
 .basketItem{
+  width: 65.9%;
   background-color: white;
   border-radius: 16px;
   padding: 16px 0 23px 0;
@@ -141,7 +142,7 @@
   margin-right: 8px;
 }
 
-.basketItem__form{
+.basketItem__section{
   padding-top: 16px;
   width: 85.6%;
 }
@@ -243,7 +244,7 @@
     width: 91.9%;
   }
 
-  .basketItem__form{
+  .basketItem__section{
     width: 100%;
   }
 
@@ -252,6 +253,12 @@
   }
   
   .basketItem__fields_is_secondField{
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 890px) {
+  .basketItem{
     width: 100%;
   }
 }
@@ -285,7 +292,7 @@
     padding-top: 10px;
   }
 
-  .basketItem__form{
+  .basketItem__section{
     margin: 0;
   }
 

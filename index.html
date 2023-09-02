@@ -26,25 +26,25 @@
           <button type="submit" class="header__searchButton"></button>
         </form>
         <div class="header__profile">
-          <button type="button" class="header__profileButton"><img src="./img/buttonProfile.svg" logo="кнопка профиля" class="header__profileImg">Профиль</button>
-          <button type="button" class="header__profileButton"><img src="./img/buttonTrash.svg" logo="кнопка корзины" class="header__profileImg">Корзина</button>
-          <div class="countGoods header__countGoods"><span class="countGoods__count">4</span></div>
+          <button type="button" class="header__profileButton"><img src="./img/buttonProfile.svg" alt="кнопка профиля" class="header__profileImg">Профиль</button>
+          <button type="button" class="header__profileButton"><img src="./img/buttonTrash.svg" alt="кнопка корзины" class="header__profileImg">Корзина</button>
+          <div class="countGoods header__countGoods"><span class="countGoods__count countGoods__headerCount"></span></div>
         </div>
       </div>
     </header>
 
     <main class="main">
-
-      <div class="main__container">
-        <section class="main__basket">
-
-          <h2 class="main__title">Корзина</h2>
-
-          <div class="main__readyToBuy">
-            <div class="main__accordeonSection accordeon">
+      <form class="main__form" novalidate>
+        <div class="main__container">
+          <section class="main__basket">
+  
+            <h2 class="main__title">Корзина</h2>
+  
+            <div class="main__readyToBuy">
+              <div class="main__accordeonSection accordeon">
                 <div class="main__checkboxContainer main__checkboxContainer_mainCheckbox">
-                  <input type="checkbox" class="main__checkbox" id="payStart0" checked>
-                  <label for="payStart0" class="main__checkboxLabel main__checkboxLabel_mainCheckbox">Выбрать все</label>
+                  <input type="checkbox" class="main__checkbox" id="checkboxMain" checked>
+                  <label for="checkboxMain" class="main__checkboxLabel main__checkboxLabel_mainCheckbox">Выбрать все</label>
                 </div>
                 <div class="accordeon__info accordeon__info_goods accordeon__info_is_hidden">
                   <p class="accordeon__count"><span class="accordeon__countNum"></span> товаров</p>
@@ -52,20 +52,20 @@
                 </div>
                 <div class="accordeon__icon accordeon__icon_existGoods"></div>
               </div>
-    
+      
               <ul class="main__cards main__cards_exict">
-    
+      
                 <li class="main__card">
                   <div class="main__cardDescription">
                     <div class="main__checkboxContainer">
-                      <input type="checkbox" class="main__checkbox main__priceGoods" id="payStart1" data-price="1051.00" checked>
-                      <label for="payStart1" class="main__checkboxLabel main__payStart_is_cards"></label>
+                      <input type="checkbox" class="main__checkbox main__priceGoods" id="checkbxOrder1" data-price="1051.00" checked>
+                      <label for="checkbxOrder1" class="main__checkboxLabel main__payStart_is_cards"></label>
                     </div>
-                    <img src="./img/photo.png" class="main__cardImg" logo="фотография">
+                    <img src="./img/photo.png" class="main__cardImg" alt="фотография">
                     <div class="main__cardProperty">
                       <div class="main__goodsPrice main__goodsPrice_mobile">
-                        <p class="main__goodsPriceSell"></p>
-                        <p class="main__goodsPriceNoSell"></p>
+                        <p class="main__goodsPriceDiscount"></p>
+                        <p class="main__goodsPriceNoDiscount"></p>
                       </div>
                       <a href="#" class="main__cardLink"><h4 class="main__cardName">Футболка UZcotton мужская</h4></a>
                       <div class="main__cardSizeColor">
@@ -74,8 +74,17 @@
                       </div>
                       <p class="main__storage">Коледино WB</p>
                       <div class="main__sellerContainer">
-                        <p class="main__seller">OOO Вайлдберриз</p>
-                        <img class="main__sellerImg" src="./img/blockInfo.svg" logo="информация">
+                       <p class="main__seller">OOO Вайлдберриз</p>
+                        <img class="main__sellerImg" src="./img/blockInfo.svg" alt="информация">
+                        <section class="popupSeller popupSeller_is_hidden">
+                          <div class="popupSeller__container">
+                            <div class="popupSeller__content">
+                              <h5 class="popupSeller__title">OOO «МЕГАПРОФСТИЛЬ»</h5>
+                              <p class="popupSeller__ogrn">ОГРН: <span class="popupSeller__ogrnNumber">5167746237148</span></p>
+                              <address class="popupSeller__adress">129337, Москва, улица Красная Сосна, 2, корпус 1, стр. 1, помещение 2, офис 34</address>  
+                            </div>
+                          </div>
+                        </section>
                       </div>
                     </div>
                   </div>
@@ -88,28 +97,41 @@
                       </div>
                       <p class="main__goodsQuantity">Осталось 2 шт.</p>
                       <div class="main__buttons">
-                        <button type="submit" class="main__buttonLikeDelete main__buttonLikeDelete_is_like"></button>
-                        <button type="submit" class="main__buttonLikeDelete main__buttonLikeDelete_is_delete"></button>
+                        <button type="button" class="main__buttonLikeDelete main__buttonLikeDelete_is_like"></button>
+                        <button type="button" class="main__buttonLikeDelete main__buttonLikeDelete_is_delete"></button>
                       </div>
                     </div>
                     <div class="main__goodsPrice">
-                      <p class="main__goodsPriceSell"></p>
-                      <p class="main__goodsPriceNoSell"></p>
+                      <p class="main__goodsPriceDiscount"></p>
+                      <p class="main__goodsPriceNoDiscount"></p>
+  
+                      <section class="popupSale popupSale_is_hidden">
+                        <div class="popupSale__container">
+                          <div class="popupSale__saleItem">
+                            <p class="popupSale__sale">Скидка 55%</p>
+                            <p class="popupSale__price">-300 сом</p>
+                          </div>
+                          <div class="popupSale__saleItem">
+                            <p class="popupSale__sale">Скидка 55%</p>
+                            <p class="popupSale__price">-300 сом</p>
+                          </div>
+                        </div>
+                      </section>
                     </div>
                   </div>
                 </li>
-    
+      
                 <li class="main__card">
                   <div class="main__cardDescription">
                     <div class="main__checkboxContainer">
-                      <input type="checkbox" class="main__checkbox main__priceGoods" id="payStart2" data-price="11500.24" checked>
-                      <label for="payStart2" class="main__checkboxLabel main__payStart_is_cards"></label>
+                      <input type="checkbox" class="main__checkbox main__priceGoods" id="checkbxOrder2" data-price="11500.24" checked>
+                      <label for="checkbxOrder2" class="main__checkboxLabel main__payStart_is_cards"></label>
                     </div>
-                    <img src="./img/photo2.png" class="main__cardImg" logo="фотография">
+                    <img src="./img/photo2.png" class="main__cardImg" alt="фотография">
                     <div class="main__cardProperty">
                       <div class="main__goodsPrice main__goodsPrice_mobile">
-                        <p class="main__goodsPriceSell main__goodsPriceSell_is_small"></p>
-                        <p class="main__goodsPriceNoSell main__goodsPriceNoSell_is_small"></p>
+                        <p class="main__goodsPriceDiscount main__goodsPriceDiscount_smallLetters"></p>
+                        <p class="main__goodsPriceNoDiscount main__goodsPriceNoSell_smallLetters"></p>
                       </div>
                       <a href="#" class="main__cardLink"><h4 class="main__cardName">Силиконовый чехол картхолдер (отверстия) для карт, прозрачный кейс бампер на Apple iPhone XR, MobiSafe</h4></a>
                       <div class="main__cardSizeColor">
@@ -119,7 +141,16 @@
                       <p class="main__storage">Коледино WB</p>
                       <div class="main__sellerContainer">
                         <p class="main__seller">OOO Мегапрофстиль</p>
-                        <img class="main__sellerImg" src="./img/blockInfo.svg" logo="информация">
+                        <img class="main__sellerImg" src="./img/blockInfo.svg" alt="информация">
+                        <section class="popupSeller popupSeller_is_hidden">
+                          <div class="popupSeller__container">
+                            <div class="popupSeller__content">
+                              <h5 class="popupSeller__title">OOO «МЕГАПРОФСТИЛЬ»</h5>
+                              <p class="popupSeller__ogrn">ОГРН: <span class="popupSeller__ogrnNumber">5167746237148</span></p>
+                              <address class="popupSeller__adress">129337, Москва, улица Красная Сосна, 2, корпус 1, стр. 1, помещение 2, офис 34</address>  
+                            </div>
+                          </div>
+                        </section>
                       </div>
                     </div>
                   </div>
@@ -131,28 +162,41 @@
                         <button type="button" class="main__counterButton main__counterButton_is_right" ></button>
                       </div>
                       <div class="main__buttons">
-                        <button type="submit" class="main__buttonLikeDelete main__buttonLikeDelete_is_like"></button>
-                        <button type="submit" class="main__buttonLikeDelete main__buttonLikeDelete_is_delete"></button>
+                        <button type="button" class="main__buttonLikeDelete main__buttonLikeDelete_is_like"></button>
+                        <button type="button" class="main__buttonLikeDelete main__buttonLikeDelete_is_delete"></button>
                       </div>
                     </div>
                     <div class="main__goodsPrice">
-                      <p class="main__goodsPriceSell main__goodsPriceSell_is_small"></p>
-                      <p class="main__goodsPriceNoSell main__goodsPriceNoSell_is_small"></p>
+                      <p class="main__goodsPriceDiscount main__goodsPriceDiscount_smallLetters"></p>
+                      <p class="main__goodsPriceNoDiscount main__goodsPriceNoSell_smallLetters"></p>
+  
+                      <section class="popupSale popupSale_is_hidden">
+                        <div class="popupSale__container">
+                          <div class="popupSale__saleItem">
+                            <p class="popupSale__sale">Скидка 55%</p>
+                            <p class="popupSale__price">-300 сом</p>
+                          </div>
+                          <div class="popupSale__saleItem">
+                            <p class="popupSale__sale">Скидка 55%</p>
+                            <p class="popupSale__price">-300 сом</p>
+                          </div>
+                        </div>
+                      </section>
                     </div>
                   </div>
                 </li>
-    
+      
                 <li class="main__card">
                   <div class="main__cardDescription">
                     <div class="main__checkboxContainer">
-                      <input type="checkbox" class="main__checkbox main__priceGoods" id="payStart3" data-price="475.00" checked>
-                      <label for="payStart3" class="main__checkboxLabel main__payStart_is_cards"></label>
+                      <input type="checkbox" class="main__checkbox main__priceGoods" id="checkbxOrder3" data-price="475.00" checked>
+                      <label for="checkbxOrder3" class="main__checkboxLabel main__payStart_is_cards"></label>
                     </div>
-                    <img src="./img/photo3.jpg" class="main__cardImg" logo="фотография">
+                    <img src="./img/photo3.jpg" class="main__cardImg" alt="фотография">
                     <div class="main__cardProperty">
                       <div class="main__goodsPrice main__goodsPrice_mobile">
-                        <p class="main__goodsPriceSell"></p>
-                        <p class="main__goodsPriceNoSell"></p>
+                        <p class="main__goodsPriceDiscount"></p>
+                        <p class="main__goodsPriceNoDiscount"></p>
                       </div>
                       <a href="#" class="main__cardLink"><h4 class="main__cardName">Карандаши цветные Faber-Castell "Замок", набор 24 цвета, заточенные, шестигранные,Faber-Castell </h4></a>
                       <div class="main__cardSizeColor main__cardSizeColor_is_Hidden">
@@ -162,7 +206,16 @@
                       <p class="main__storage">Коледино WB</p>
                       <div class="main__sellerContainer">
                         <p class="main__seller">OOO Вайлдберриз</p>
-                        <img class="main__sellerImg" src="./img/blockInfo.svg" logo="информация">
+                        <img class="main__sellerImg" src="./img/blockInfo.svg" alt="информация">
+                        <section class="popupSeller popupSeller_is_hidden">
+                          <div class="popupSeller__container">
+                            <div class="popupSeller__content">
+                              <h5 class="popupSeller__title">OOO «МЕГАПРОФСТИЛЬ»</h5>
+                              <p class="popupSeller__ogrn">ОГРН: <span class="popupSeller__ogrnNumber">5167746237148</span></p>
+                              <address class="popupSeller__adress">129337, Москва, улица Красная Сосна, 2, корпус 1, стр. 1, помещение 2, офис 34</address>  
+                            </div>
+                          </div>
+                        </section>
                       </div>
                     </div>
                   </div>
@@ -175,103 +228,117 @@
                       </div>
                       <p class="main__goodsQuantity">Осталось 2 шт.</p>
                       <div class="main__buttons">
-                        <button type="submit" class="main__buttonLikeDelete main__buttonLikeDelete_is_like"></button>
-                        <button type="submit" class="main__buttonLikeDelete main__buttonLikeDelete_is_delete"></button>
+                        <button type="button" class="main__buttonLikeDelete main__buttonLikeDelete_is_like"></button>
+                        <button type="button" class="main__buttonLikeDelete main__buttonLikeDelete_is_delete"></button>
                       </div>
                     </div>
                     <div class="main__goodsPrice">
-                      <p class="main__goodsPriceSell"></p>
-                      <p class="main__goodsPriceNoSell"></p>
+                      <p class="main__goodsPriceDiscount"></p>
+                      <p class="main__goodsPriceNoDiscount"></p>
+  
+                      <section class="popupSale popupSale_is_hidden">
+                        <div class="popupSale__container">
+                          <div class="popupSale__saleItem">
+                            <p class="popupSale__sale">Скидка 55%</p>
+                            <p class="popupSale__price">-300 сом</p>
+                          </div>
+                          <div class="popupSale__saleItem">
+                            <p class="popupSale__sale">Скидка 55%</p>
+                            <p class="popupSale__price">-300 сом</p>
+                          </div>
+                        </div>
+                      </section>
                     </div>
                   </div>
                 </li>
-
+  
               </ul>
-          </div>
-
-          <div class="main__dontExict">
-            <div class="main__accordeonSection main__accordeonSection_dontExist accordeon main__payStartWrapper_is_main">
-                <div class="main__payStartWrapper">
-                  <div class="accordeon__info accordeon__info_dontExist">
-                    <p class="accordeon__count">Отсуствуют</p>
-                    <p class="accordeon__item">3 товара</p>
+            </div>
+  
+            <div class="main__dontExict">
+              <div class="main__accordeonSection main__accordeonSection_dontExist accordeon main__payStartWrapper_is_main">
+                  <div class="main__payStartWrapper">
+                    <div class="accordeon__info accordeon__info_dontExist">
+                      <p class="accordeon__count">Отсуствуют</p>
+                      <p class="accordeon__item accordeon__countDontExist"></p>
+                    </div>
                   </div>
+                  <div class="accordeon__icon accordeon__icon_dontExistGoods"></div>
                 </div>
-                <div class="accordeon__icon accordeon__icon_dontExistGoods"></div>
-              </div>
-    
-              <ul class="main__cards main__cards_temp main__cards_dontExict">
-    
-                <li class="main__card main__card_dontExist">
-                  <div class="main__cardDescription main__cardDescription_dontExist">
-                    <img src="./img/photo.png" class="main__cardImg" logo="фотография">
-                    <div class="main__cardProperty">
-                      <h4 class="main__cardName">Футболка UZcotton мужская</h4>
-                      <div class="main__cardSizeColor">
-                        <p class="main__cardColor">Цвет: <span class="main__cardColorItem">белый</span></p>
-                        <p class="main__cardSize">Размер: <span class="main__cardSizeItem">56</span></p>
-                      </div>                     
-                    </div>
-                  </div>
-                  <div class="main__cardPrice main__cardPrice_dontExist">
-                    <div class="main__goodsCounter main__goodsCounter_dontExist">
-                      <div class="main__buttons ">
-                        <button type="submit" class="main__buttonLikeDelete main__buttonLikeDelete_is_like main__buttonLikeDelete_goodsDontExist"></button>
-                        <button type="submit" class="main__buttonLikeDelete main__buttonLikeDelete_is_delete main__buttonLikeDelete_dontExist main__buttonLikeDelete_goodsDontExist"></button>
+      
+                <ul class="main__cards main__cards_temp main__cards_dontExict">
+      
+                  <li class="main__card main__card_dontExist">
+                    <div class="main__cardDescription main__cardDescription_dontExist">
+                      <img src="./img/photo.png" class="main__cardImg" alt="фотография">
+                      <div class="main__cardProperty">
+                        <h4 class="main__cardName">Футболка UZcotton мужская</h4>
+                        <div class="main__cardSizeColor">
+                          <p class="main__cardColor">Цвет: <span class="main__cardColorItem">белый</span></p>
+                          <p class="main__cardSize">Размер: <span class="main__cardSizeItem">56</span></p>
+                        </div>                     
                       </div>
                     </div>
-                  </div>
-                </li>
-    
-                <li class="main__card main__card_dontExist">
-                  <div class="main__cardDescription main__cardDescription_dontExist">
-                    <img src="./img/photo2.png" class="main__cardImg" logo="фотография">
-                    <div class="main__cardProperty">
-                      <h4 class="main__cardName">Силиконовый чехол картхолдер (отверстия) для карт, прозрачный кейс бампер на Apple iPhone XR, MobiSafe</h4>
-                      <div class="main__cardSizeColor">
-                        <p class="main__cardColor">Цвет: <span class="main__cardColorItem">прозрачный</span></p>
-                        <p class="main__cardSize main__cardSize_is_Hidden">Размер: <span class="main__cardSizeItem">56</span></p>
+                    <div class="main__cardPrice main__cardPrice_dontExist">
+                      <div class="main__goodsCounter main__goodsCounter_dontExist">
+                        <div class="main__buttons ">
+                          <button type="button" class="main__buttonLikeDelete main__buttonLikeDelete_is_like main__buttonLikeDelete_goodsDontExist"></button>
+                          <button type="button" class="main__buttonLikeDelete main__buttonLikeDelete_is_delete main__buttonLikeDelete_dontExist main__buttonLikeDelete_goodsDontExist"></button>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="main__cardPrice main__cardPrice_dontExist">
-                    <div class="main__goodsCounter main__goodsCounter_dontExist">
-                      <div class="main__buttons">
-                        <button type="submit" class="main__buttonLikeDelete main__buttonLikeDelete_is_like main__buttonLikeDelete_goodsDontExist"></button>
-                        <button type="submit" class="main__buttonLikeDelete main__buttonLikeDelete_is_delete main__buttonLikeDelete_dontExist main__buttonLikeDelete_goodsDontExist"></button>
+                  </li>
+      
+                  <li class="main__card main__card_dontExist">
+                    <div class="main__cardDescription main__cardDescription_dontExist">
+                      <img src="./img/photo2.png" class="main__cardImg" alt="фотография">
+                      <div class="main__cardProperty">
+                        <h4 class="main__cardName">Силиконовый чехол картхолдер (отверстия) для карт, прозрачный кейс бампер на Apple iPhone XR, MobiSafe</h4>
+                        <div class="main__cardSizeColor">
+                          <p class="main__cardColor">Цвет: <span class="main__cardColorItem">прозрачный</span></p>
+                          <p class="main__cardSize main__cardSize_is_Hidden">Размер: <span class="main__cardSizeItem">56</span></p>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </li>
-    
-                <li class="main__card main__card_dontExist">
-                  <div class="main__cardDescription main__cardDescription_dontExist">
-                    <img src="./img/photo3.jpg" class="main__cardImg" logo="фотография">
-                    <div class="main__cardProperty">
-                      <h4 class="main__cardName">Карандаши цветные Faber-Castell "Замок", набор 24 цвета, заточенные, шестигранные,Faber-Castell </h4>
-                      <div class="main__cardSizeColor main__cardSizeColor_is_Hidden">
-                        <p class="main__cardColor">Цвет: <span class="main__cardColorItem">прозрачный</span></p>
-                        <p class="main__cardSize main__cardSize_is_Hidden">Размер: <span class="main__cardSizeItem">56</span></p>
+                    <div class="main__cardPrice main__cardPrice_dontExist">
+                      <div class="main__goodsCounter main__goodsCounter_dontExist">
+                        <div class="main__buttons">
+                          <button type="button" class="main__buttonLikeDelete main__buttonLikeDelete_is_like main__buttonLikeDelete_goodsDontExist"></button>
+                          <button type="button" class="main__buttonLikeDelete main__buttonLikeDelete_is_delete main__buttonLikeDelete_dontExist main__buttonLikeDelete_goodsDontExist"></button>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="main__cardPrice main__cardPrice_dontExist">
-                    <div class="main__goodsCounter main__goodsCounter_dontExist">
-                      <div class="main__buttons">
-                        <button type="submit" class="main__buttonLikeDelete main__buttonLikeDelete_is_like main__buttonLikeDelete_goodsDontExist"></button>
-                        <button type="submit" class="main__buttonLikeDelete main__buttonLikeDelete_is_delete main__buttonLikeDelete_dontExist main__buttonLikeDelete_goodsDontExist"></button>
+                  </li>
+      
+                  <li class="main__card main__card_dontExist">
+                    <div class="main__cardDescription main__cardDescription_dontExist">
+                      <img src="./img/photo3.jpg" class="main__cardImg" alt="фотография">
+                      <div class="main__cardProperty">
+                        <h4 class="main__cardName">Карандаши цветные Faber-Castell "Замок", набор 24 цвета, заточенные, шестигранные,Faber-Castell </h4>
+                        <div class="main__cardSizeColor main__cardSizeColor_is_Hidden">
+                          <p class="main__cardColor">Цвет: <span class="main__cardColorItem">прозрачный</span></p>
+                          <p class="main__cardSize main__cardSize_is_Hidden">Размер: <span class="main__cardSizeItem">56</span></p>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </li>
-              </ul>
-          </div>
-
-          <section class="chooseDelivery basketItem main__container_basket">
+                    <div class="main__cardPrice main__cardPrice_dontExist">
+                      <div class="main__goodsCounter main__goodsCounter_dontExist">
+                        <div class="main__buttons">
+                          <button type="button" class="main__buttonLikeDelete main__buttonLikeDelete_is_like main__buttonLikeDelete_goodsDontExist"></button>
+                          <button type="button" class="main__buttonLikeDelete main__buttonLikeDelete_is_delete main__buttonLikeDelete_dontExist main__buttonLikeDelete_goodsDontExist"></button>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+            </div>
+          </section>
+  
+          <section class="basketItem chooseDelivery">
             <div class="basketItem__container">
               <div class="basketItem__changebasketItem">
                 <h2 class="basketItem__title">Способ доставки</h2>
-                <button class="basketItem__editButton chooseDelivery__editButton">Изменить</button>
+                <button type="button" class="basketItem__editButton chooseDelivery__editButton">Изменить</button>
               </div>
               <div class="basketItem__item">
                 <p class="basketItem__itemTitle">Пункт выдачи</p>
@@ -292,15 +359,15 @@
                 <p class="basketItem__itemTitle">5-7 февраля</p>
                 <div class="basketItem__goodsDelivery">
                   <div class="basketItem__goodsCount">
-                    <img class="basketItem__goodsImg" src="./img/photoMini1.jpg">
+                    <img class="basketItem__goodsImg" src="./img/photoMini1.jpg" alt="изображение товара">
                     <div class="countGoods basketItem__countGoods"><span class="countGoods__count">4</span></div>
                   </div>
                   <div class="basketItem__goodsCount">
-                    <img class="basketItem__goodsImg" src="./img/photoMini2.jpg">
+                    <img class="basketItem__goodsImg" src="./img/photoMini2.jpg" alt="изображение товара">
                     <div class="countGoods basketItem__countGoods"><span class="countGoods__count">4</span></div>
                   </div>
                   <div class="basketItem__goodsCount">
-                    <img class="basketItem__goodsImg" src="./img/photoMini3.jpg">
+                    <img class="basketItem__goodsImg" src="./img/photoMini3.jpg" alt="изображение товара">
                     <div class="countGoods basketItem__countGoods"><span class="countGoods__count">4</span></div>
                   </div>
                 </div>
@@ -309,26 +376,29 @@
                 <p class="basketItem__itemTitle">8-9 февраля</p>
                 <div class="basketItem__goodsDelivery">
                   <div class="basketItem__goodsCount">
-                    <img class="basketItem__goodsImg" src="./img/photoMini4.jpg">
+                    <img class="basketItem__goodsImg" src="./img/photoMini4.jpg" alt="изображение товара">
                     <div class="countGoods basketItem__countGoods"><span class="countGoods__count">4</span></div>
                   </div>
                 </div>
               </div>
               <section class="order-details__ref order-details__ref_display_flex">
-                <img src="./img/priceShipping.svg" logo="галочка" class="order-details__infoImg">
+                <img src="./img/priceShipping.svg" alt="галочка" class="order-details__infoImg">
                 <p class="order-details__info">Обратная доставка товаров на склад при отказе —<span class="order-details__infoPrice">бесплатно</span></p>
+                <section class="popupOrder popupOrder_is_hidden">
+                  <p class="popupOrder__text">Если товары вам не подойдут, мы вернем их обратно на склад — это бесплатно</p>
+                </section>
               </section>
             </div>
           </section>
   
-          <section class="payMethod basketItem">
+          <section class="basketItem payMethod">
             <div class="basketItem__container">
               <div class="basketItem__changebasketItem">
                 <h2 class="basketItem__title">Способ оплаты</h2>
-                <button class="basketItem__editButton payMethod__editButton">Изменить</button>
+                <button type="button" class="basketItem__editButton payMethod__editButton">Изменить</button>
               </div>
               <div class="basketItem__payMethod">
-                <img class="basketItem__imgCard" logo="карта банка" src="./img/imgCard.jpg">
+                <img class="basketItem__imgCard" alt="карта банка" src="./img/imgCard.jpg">
                 <p class="basketItem__cardNumber">1234 56•• •••• 1234</p>
                 <p class="basketItem__expareDate">11/30</p>
               </div>
@@ -336,10 +406,10 @@
             </div>
           </section>
   
-          <section class="basketItem customerForm container_is_main">
+          <section class="basketItem customerForm">
             <div class="basketItem__container">
               <h2 class="basketItem__title basketItem__title_size_mobile">Получатель</h2>
-              <form class="basketItem__form" novalidate>
+              <div class="basketItem__section">
                 <div class="basketItem__fields">
                   <div class="basketItem__field basketItem__fields_is_firstField">
                     <input type="text" class="basketItem__input" id="name" required placeholder data-error-message-required="Укажите имя">
@@ -359,7 +429,7 @@
                     <span class="email-error basketItem__inpuError"></span>
                   </div>
                   <div class="basketItem__field basketItem__fields_is_secondField">
-                    <input type="tel" pattern="+7 [0-9]{3} [0-9]{3} [0-9]{2} [0-9]{2}" class="basketItem__input" id="tel" required placeholder data-error-message-required="Укажите номер телефона" data-error-message-format="Формат +7 999 999 99 99">
+                    <input type="tel" pattern="\+7\-[0-9]{3}\-[0-9]{3}\-[0-9]{2}\-[0-9]{2}" class="basketItem__input" id="tel" required placeholder data-error-message-required="Укажите номер телефона" data-error-message-format="Формат +7 999 999 99 99">
                     <label for="tel" class="basketItem__label">Телефон</label>
                     <span class="tel-error basketItem__inpuError"></span>
                   </div>
@@ -370,107 +440,80 @@
                     <span class="inn-error basketItem__inpuError"></span>
                   </div>
                 </div>
-              </form>
+              </div>
             </div>
           </section>
-
-        </section>
-
-        <aside class="order-details">
-          <form class="order-details__container">
-
-            <section class="order-details__price">
-              <div class="order-details__priceItem">
-                <h3 class="order-details__title">Итого</h3>
-                <p class="order-details__titlePrice">2 101 063 сом</p>
-              </div>
-              <div class="order-details__priceItem">
-                <p class="order-details__description">203 товара</p>
-                <p class="order-details__descriptionPrice order-details__totalPrice">2 302 048 сом</p>
-              </div>
-              <div class="order-details__priceItem">
-                <p class="order-details__description">Скидка</p>
-                <p class="order-details__descriptionPrice order-details__sell">−200 985 сом</p>
-              </div>
-              <div class="order-details__priceItem">
-                <p class="order-details__description">Доставка</p>
-                <p class="order-details__descriptionPrice">Бесплатно</p>
-              </div>
-            </section>
-
-            <section class="order-details__price">
-              <div class="order-details__editContainer order-details__price_is_hidden">
-                <h4 class="order-details__subTitle">Доставка в пункт выдачи</h4>
-                <button type="button" class="order-details__editButton order-details__choodeDelivery"><img src="./img/editButton.svg" logo="редактировать" class="order-details__editImg"></button>
-              </div>
-              <address class="order-details__deliveryAdress order-details__price_is_hidden">Бишкек, улица Ахматбека Суюмбаева, 12/1</address>
-              <p class="order-details__deliveryTime order-details__price_is_hidden">5-6 фев.</p>
-              <section class="order-details__ref order-details__ref_color_grey order-details__ref_display_flex">
-                <img src="./img/priceShipping.svg" logo="галочка" class="order-details__infoImg">
-                <p class="order-details__info">Обратная доставка товаров на склад при отказе —<span class="order-details__infoPrice">бесплатно</span></p>
-              </section>
-            </section>
-
-            <section class="order-details__price">
-              <div class="order-details__editContainer order-details__price_is_hidden">
-                <h4 class="order-details__subTitle">Оплата картой</h4>
-                <button type="button" class="order-details__editButton order-details__payMethod"><img src="./img/editButton.svg" logo="редактировать" class="order-details__editImg"></button>
-              </div>
-              <div class="order-details__paySystem order-details__price_is_hidden">
-                <img src="./img/paySystem.svg" logo="тип карты" class="order-details__card">
-                <p class="order-details__cardNumber">1234 12•• •••• 1234</p>
-              </div>
-
-              <section class="order-details__ref order-details__ref_color_grey">
-                <div class="order-details__paymentContainer">
-                  <input type="checkbox" class="order-details__paymentInput" id="payStart">
-                  <label for="payStart" class="order-details__paymentLabel">Списать оплату сразу</label>
+  
+          <aside class="order-details">
+            <div class="order-details__container">
+  
+              <section class="order-details__price">
+                <div class="order-details__priceItem">
+                  <h3 class="order-details__title">Итого</h3>
+                  <p class="order-details__titlePrice">2 101 063 сом</p>
                 </div>
-                <p class="order-details__infoPay">Спишем оплату с карты при получении</p>
+                <div class="order-details__priceItem">
+                  <p class="order-details__description">203 товара</p>
+                  <p class="order-details__descriptionPrice order-details__totalPrice">2 302 048 сом</p>
+                </div>
+                <div class="order-details__priceItem">
+                  <p class="order-details__description">Скидка</p>
+                  <p class="order-details__descriptionPrice order-details__sell">−200 985 сом</p>
+                </div>
+                <div class="order-details__priceItem">
+                  <p class="order-details__description">Доставка</p>
+                  <p class="order-details__descriptionPrice">Бесплатно</p>
+                </div>
               </section>
-            </section>
-             
-            <button type="submit" class="order-details__orderButton">Заказать</button>
-
-            <div class="order-details__rulesWrapper">
-              <img src="./img/agreeWithRules.svg" class="order-details__rulesImg" logo="галочка">
-              <p class="order-details__info">Соглашаюсь с правилами пользования торговой площадкой и возврата</p>
+  
+              <section class="order-details__price">
+                <div class="order-details__editContainer order-details__price_is_hidden">
+                  <h4 class="order-details__subTitle">Доставка в пункт выдачи</h4>
+                  <button type="button" class="order-details__editButton order-details__choodeDelivery"><img src="./img/editButton.svg" alt="редактировать" class="order-details__editImg"></button>
+                </div>
+                <address class="order-details__deliveryAdress order-details__price_is_hidden">Бишкек, улица Ахматбека Суюмбаева, 12/1</address>
+                <p class="order-details__deliveryTime order-details__price_is_hidden">5-6 фев.</p>
+                <section class="order-details__ref order-details__ref_color_grey order-details__ref_display_flex">
+                  <img src="./img/priceShipping.svg" alt="галочка" class="order-details__infoImg">
+                  <p class="order-details__info">Обратная доставка товаров на склад при отказе —<span class="order-details__infoPrice">бесплатно</span></p>
+                  <section class="popupOrder popupOrder_is_hidden">
+                    <p class="popupOrder__text">Если товары вам не подойдут, мы вернем их обратно на склад — это бесплатно</p>
+                  </section>
+                </section>
+              </section>
+  
+              <section class="order-details__price">
+                <div class="order-details__editContainer order-details__price_is_hidden">
+                  <h4 class="order-details__subTitle">Оплата картой</h4>
+                  <button type="button" class="order-details__editButton order-details__payMethod"><img src="./img/editButton.svg" alt="редактировать" class="order-details__editImg"></button>
+                </div>
+                <div class="order-details__paySystem order-details__price_is_hidden">
+                  <img src="./img/paySystem.svg" alt="тип карты" class="order-details__card">
+                  <p class="order-details__cardNumber">1234 12•• •••• 1234</p>
+                </div>
+  
+                <section class="order-details__ref order-details__ref_color_grey">
+                  <div class="order-details__paymentContainer">
+                    <input type="checkbox" class="order-details__paymentInput" id="checkbxOrder">
+                    <label for="checkbxOrder" class="order-details__paymentLabel">Списать оплату сразу</label>
+                  </div>
+                  <p class="order-details__infoPay">Спишем оплату с карты при получении</p>
+                </section>
+              </section>
+               
+              <button type="submit" class="order-details__orderButton">Заказать</button>
+  
+              <div class="order-details__rulesWrapper">
+                <img src="./img/agreeWithRules.svg" class="order-details__rulesImg" alt="галочка">
+                <p class="order-details__info">Соглашаюсь с правилами пользования торговой площадкой и возврата</p>
+              </div>
+  
             </div>
-
-          </form>
-        </aside>
-      </div>
-
-      <section class="popupOrder popupOrder_is_hidden">
-        <p class="popupOrder__text">Если товары вам не подойдут, мы вернем их обратно на склад — это бесплатно</p>
-      </section>
-
-      <section class="popupSale popupSale_is_hidden">
-        <div class="popupSale__container">
-          <div class="popupSale__saleItem">
-            <p class="popupSale__sale">Скидка 55%</p>
-            <p class="popupSale__price">-300 сом</p>
-          </div>
-          <div class="popupSale__saleItem">
-            <p class="popupSale__sale">Скидка 55%</p>
-            <p class="popupSale__price">-300 сом</p>
-          </div>
+          </aside>
         </div>
-      </section>
-
-      <section class="popupSeller">
-        <div class="popupSeller__container">
-          <div class="popupSeller__content">
-            <h5 class="popupSeller__title">OOO «МЕГАПРОФСТИЛЬ»</h5>
-            <p class="popupSeller__ogrn">ОГРН: <span class="popupSeller__ogrnNumber">5167746237148</span></p>
-            <address class="popupSeller__adress">129337, Москва, улица Красная Сосна, 2, корпус 1, стр. 1, помещение 2, офис 34</address>  
-          </div>
-        </div>
-      </section>
-
-      <section class="popup popupPayMethod">
-        <form class="popup__form">
-          <div class="popup__formContainer">
+  
+        <section class="popup popupPayMethod">
+          <div class="popup__container">
             <div class="popup__titleContainer">
               <h5 class="popup__title">Способы оплаты</h5>
               <button type="button" class="popup__closeButton popupPayMethod__closeButton"><img class="popup__imgButton" src="./img/buttonClose.svg" alt="закрыть"></button>
@@ -511,87 +554,86 @@
             </ul>
             <button type="submit" class="popup__button">Выбрать</button>
           </div>
-        </form>
-      </section>
-      
-      <section class="popup popupChooseDelivery">
-        <form class="popup__form popup__form_type_chooseDelivery">
-          <div class="popup__formContainer">
-            <div class="popup__titleContainer">
-              <h5 class="popup__title">Способы доставки</h5>
-              <button type="button" class="popup__closeButton popupChooseDelivery__closeButton"><img class="popup__imgButton" src="./img/buttonClose.svg" alt="закрыть"></button>
-            </div>
-            <div class="popup__chooseDelivery">
-              <input class="popup__chooseDeliveryButton" type="radio" name="deliveryOption" id="courierOption" value="courier">
-              <label class="popup__chooseDeliveryLabel" for="courierOption">В пункт выдачи</label>
-              <input class="popup__chooseDeliveryButton" type="radio" name="deliveryOption" id="pickupOption" value="pickup">
-              <label class="popup__chooseDeliveryLabel" for="pickupOption">Курьером</label>
-            </div>
-            <div id="courierAddress" class="popup__addressesCont popup__addressesCont_by_courier popup__addressesCont_is_hidden">
-              <h6 class="popup__chooseDeliveryTitle">Мои адреса</h6>
-              <ul class="popup__addresses">
+        </section>
+        
+        <section class="popup popupChooseDelivery">
+          <div class="popup__container popup__container_type_chooseDelivery">
+            <div class="popup__formContainer">
+              <div class="popup__titleContainer">
+                <h5 class="popup__title">Способы доставки</h5>
+                <button type="button" class="popup__closeButton popupChooseDelivery__closeButton"><img class="popup__imgButton" src="./img/buttonClose.svg" alt="закрыть"></button>
+              </div>
+              <div class="popup__chooseDelivery">
+                <input class="popup__chooseDeliveryButton" type="radio" name="deliveryOption" id="courierOption" value="courier">
+                <label class="popup__chooseDeliveryLabel" for="courierOption">В пункт выдачи</label>
+                <input class="popup__chooseDeliveryButton" type="radio" name="deliveryOption" id="pickupOption" value="pickup">
+                <label class="popup__chooseDeliveryLabel" for="pickupOption">Курьером</label>
+              </div>
+              <div id="courierAddress" class="popup__addressesCont popup__addressesCont_by_courier popup__addressesCont_is_hidden">
+                <h6 class="popup__chooseDeliveryTitle">Мои адреса</h6>
+                <ul class="popup__addresses">
+                  <li class="popup__item popup__item_type_chooseDelivery">
+                    <div class="popup__itemContainer">
+                      <div class="popup__checkBoxContainer">
+                        <input type="radio" name="payMethod" class="popup__input" id="address1">
+                        <label for="address1" class="popup__label"></label>
+                      </div>
+                      <address class="popup__address">Бишкек, улица Табышалиева, 57</address>
+                    </div>
+                    <button type="button" class="popup__deleteButton"></button>
+                  </li>
+                  <li class="popup__item popup__item_type_chooseDelivery">
+                      <div class="popup__itemContainer">
+                        <div class="popup__checkBoxContainer">
+                          <input type="radio" name="payMethod" class="popup__input" id="address2">
+                          <label for="address2" class="popup__label"></label>
+                        </div>
+                        <address class="popup__address">Бишкек, улица Жукеева-Пудовкина, 77/1</address>
+                      </div>
+                      <button type="button" class="popup__deleteButton"></button>
+                    </li>
                 <li class="popup__item popup__item_type_chooseDelivery">
                   <div class="popup__itemContainer">
                     <div class="popup__checkBoxContainer">
-                      <input type="radio" name="payMethod" class="popup__input" id="address1">
-                      <label for="address1" class="popup__label"></label>
+                      <input type="radio" name="payMethod" class="popup__input" id="address3">
+                      <label for="address3" class="popup__label"></label>
                     </div>
-                    <address class="popup__address">Бишкек, улица Табышалиева, 57</address>
-                  </div>
+                    <address class="popup__address">Бишкек, микрорайон Джал, улица Ахунбаева Исы, 67/1</address>
+                  </div> 
                   <button type="button" class="popup__deleteButton"></button>
                 </li>
-                <li class="popup__item popup__item_type_chooseDelivery">
+              </ul>
+            </div>
+            <div id="pickupAddress" class="popup__addressesCont popup__addressesCont_by_pickPoint">
+              <h6 class="popup__chooseDeliveryTitle">Адреса пунктов выдачи заказа</h6>
+                <ul class="popup__addresses popup__cards">
+                  <li class="popup__item popup__item_type_chooseDelivery">
                     <div class="popup__itemContainer">
                       <div class="popup__checkBoxContainer">
-                        <input type="radio" name="payMethod" class="popup__input" id="address2">
-                        <label for="address2" class="popup__label"></label>
+                        <input type="radio" name="payMethod" class="popup__input" id="addressPickPoint1">
+                        <label for="addressPickPoint1" class="popup__label"></label>
+                      </div>
+                      <address class="popup__address">Бишкек, улица Табышалиева, 57</address>
+                    </div>
+                    <button type="button" class="popup__deleteButton"></button>
+                  </li>
+                  <li class="popup__item popup__item_type_chooseDelivery">
+                    <div class="popup__itemContainer">
+                      <div class="popup__checkBoxContainer">
+                        <input type="radio" name="payMethod" class="popup__input" id="addressPickPoint2">
+                        <label for="addressPickPoint2" class="popup__label"></label>
                       </div>
                       <address class="popup__address">Бишкек, улица Жукеева-Пудовкина, 77/1</address>
                     </div>
                     <button type="button" class="popup__deleteButton"></button>
                   </li>
-              <li class="popup__item popup__item_type_chooseDelivery">
-                <div class="popup__itemContainer">
-                  <div class="popup__checkBoxContainer">
-                    <input type="radio" name="payMethod" class="popup__input" id="address3">
-                    <label for="address3" class="popup__label"></label>
-                  </div>
-                  <address class="popup__address">Бишкек, микрорайон Джал, улица Ахунбаева Исы, 67/1</address>
-                </div> 
-                <button type="button" class="popup__deleteButton"></button>
-              </li>
-            </ul>
+                </ul>
+            </div>
+            <button type="submit" class="popup__button">Выбрать</button>
           </div>
-          <div id="pickupAddress" class="popup__addressesCont popup__addressesCont_by_pickPoint">
-            <h6 class="popup__chooseDeliveryTitle">Адреса пунктов выдачи заказа</h6>
-              <ul class="popup__addresses popup__cards">
-                <li class="popup__item popup__item_type_chooseDelivery">
-                  <div class="popup__itemContainer">
-                    <div class="popup__checkBoxContainer">
-                      <input type="radio" name="payMethod" class="popup__input" id="addressPickPoint1">
-                      <label for="addressPickPoint1" class="popup__label"></label>
-                    </div>
-                    <address class="popup__address">Бишкек, улица Табышалиева, 57</address>
-                  </div>
-                  <button type="button" class="popup__deleteButton"></button>
-                </li>
-                <li class="popup__item popup__item_type_chooseDelivery">
-                  <div class="popup__itemContainer">
-                    <div class="popup__checkBoxContainer">
-                      <input type="radio" name="payMethod" class="popup__input" id="addressPickPoint2">
-                      <label for="addressPickPoint2" class="popup__label"></label>
-                    </div>
-                    <address class="popup__address">Бишкек, улица Жукеева-Пудовкина, 77/1</address>
-                  </div>
-                  <button type="button" class="popup__deleteButton"></button>
-                </li>
-              </ul>
-          </div>
-          <button type="submit" class="popup__button">Выбрать</button>
         </div>
+        </section>
       </form>
-      </section>
-
     </main>
 
     <footer class="footer">
@@ -601,20 +643,40 @@
     <div class="footerMobile">
       <nav class="footerMobile__navigation">
         <ul class="footerMobile__items">
-          <li class="footerMobile__item"><a href="#" class="footerMobile__link"><img class="footerMobile__img" src="./img/buttonUnion.svg" logo="главная"></a></li>
-          <li class="footerMobile__item"><a href="#" class="footerMobile__link"><img class="footerMobile__img" src="./img/buttonSearchMobile.svg" logo="поиск"></a></li>
-          <div class="footerMobile__cartContainer">
-            <li class="footerMobile__item"><a href="#" class="footerMobile__link"><img class="footerMobile__img" src="./img/buttonCVector.svg" logo="корзина"></a></li>
-            <div class="countGoods footerMobile_coutCartMobile"><span class="countGoods__count">4</span></div>
-          </div>
-          <li class="footerMobile__item"><a href="#" class="footerMobile__link"><img class="footerMobile__img" src="./img/buttonHeart.svg" logo="избранное"></a></li>
-          <li class="footerMobile__item"><a href="#" class="footerMobile__link"><img class="footerMobile__img" src="./img/buttonProfile.svg" logo="профиль"></a></li>
+          <li class="footerMobile__item">
+            <a href="#" class="footerMobile__link">
+              <img class="footerMobile__img" src="./img/buttonUnion.svg" alt="главная">
+            </a>
+          </li>
+          <li class="footerMobile__item">
+            <a href="#" class="footerMobile__link">
+              <img class="footerMobile__img" src="./img/buttonSearchMobile.svg" alt="поиск">
+            </a>
+          </li>
+          <li class="footerMobile__item footerMobile__item_withCount">
+            <div class="countGoods footerMobile_coutCartMobile">
+              <span class="countGoods__count">4</span>
+            </div>
+            <a href="#" class="footerMobile__link">
+              <img class="footerMobile__img" src="./img/buttonCVector.svg" alt="корзина">
+            </a>
+          </li>
+          <li class="footerMobile__item">
+            <a href="#" class="footerMobile__link">
+              <img class="footerMobile__img" src="./img/buttonHeart.svg" alt="избранное">
+            </a>
+          </li>
+          <li class="footerMobile__item">
+            <a href="#" class="footerMobile__link">
+              <img class="footerMobile__img" src="./img/buttonProfile.svg" alt="профиль">
+            </a>
+          </li>
         </ul>
       </nav>
     </div>
 
-    <script src="./index.js" defer></script>
-    <script src="./validation.js" defer></script>
-    <script src="./checkbox.js" defer></script>  
+    <script src="./js/index.js" defer></script>
+    <script src="./js/validation.js" defer></script>
+    <script src="./js/basket.js" defer></script>  
   </body>
 </html>

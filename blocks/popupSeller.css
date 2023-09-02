@@ -1,9 +1,9 @@
 .popupSeller{
-  display: none; /* По умолчанию скрыто */
+  display: block;
 
   position: absolute;
-  top: 100%;
-  left: 0;
+  top: 25px;
+  right: 22px;
 }
 
 .popupSeller_is_hidden{
