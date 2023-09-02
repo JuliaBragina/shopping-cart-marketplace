@@ -13,4 +13,4 @@
 - JavaScript
 
 ## GitHub Pages:
-
+https://juliabragina.github.io/shopping-cart-marketplace/

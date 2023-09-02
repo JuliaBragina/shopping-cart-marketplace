@@ -26,14 +26,12 @@
   height: 408px;
   border-radius: 16px;
   background-color: white;
+
+  padding: 16px 22px 22px 24px;
 }
 
 .ppopup__container_type_chooseDelivery{
   width: 500px;
-}
- 
-.popup__formContainer {
-  padding: 16px 22px 22px 24px;
 }
   
 .popup__titleContainer {
