@@ -5,7 +5,7 @@ const mainCardsDontExist = document.querySelector('.main__cards_dontExict');
 const mainCards = document.querySelector('.main__cards');
 const mainSellerImg = document.querySelectorAll('.main__sellerImg');
 const orderDetails = document.querySelectorAll('.order-details__infoPrice');
-const priceSell = document.querySelectorAll('.main__goodsPriceNoSell');
+const priceSell = document.querySelectorAll('.main__goodsPriceNoDiscount');
 
 const checkBoxAll = document.querySelector('.main__checkboxContainer_mainCheckbox');
 const accordeonBoxAll = document.querySelector('.accordeon__info_goods');
@@ -68,7 +68,6 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', () => {
   orderDetails.forEach(function (element) {
     element.addEventListener('click', () => {
-      console.log(element, element.parentNode, element.parentNode.childNodes)
       element.parentNode.nextSibling.nextSibling.classList.toggle('popupOrder_is_hidden');
     });
   });

@@ -4,6 +4,7 @@
   position: absolute;
   top: 25px;
   right: 22px;
+  z-index: 1;
 }
 
 .popupSeller_is_hidden{
@@ -15,6 +16,8 @@
   height: 104px;
   width: 280px;
   border-radius: 8px;
+  padding-top: 12px;
+  padding-bottom: 12px;
 
   box-shadow: 0px 0px 15px 0px rgba(0,0,0,.2);
 }
@@ -22,8 +25,6 @@
 .popupSeller__content{
   width: 88.6%;
   margin: 0 auto;
-  padding-top: 12px;
-  padding-bottom: 12px;
 }
 
 .popupSeller__title{
@@ -58,7 +59,5 @@
   font-weight: normal;
   font-family: 'Segoe UI', Arial, sans-serif;
   font-style: normal;
-
-  margin-bottom: 12px;
   color: black;
 }
