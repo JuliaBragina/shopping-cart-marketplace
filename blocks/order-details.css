@@ -1,7 +1,7 @@
 .order-details{
   position: absolute;
   right: 0;
-  top: 24px;
+  top: 0;
   background-color: white;
   width: 31.7%;
   border-radius: 12px;
@@ -277,7 +277,7 @@
 
   .order-details__container{
     width: 98%;
-    padding-bottom: 0;
+    padding: 0;
   }
 
   .order-details__price{

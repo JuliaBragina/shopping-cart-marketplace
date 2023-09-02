@@ -260,6 +260,7 @@
 @media screen and (max-width: 890px) {
   .basketItem{
     width: 100%;
+    margin-bottom: 5px;
   }
 }
 
@@ -294,6 +295,7 @@
 
   .basketItem__section{
     margin: 0;
+    padding: 0;
   }
 
   .basketItem__fields{
@@ -303,7 +305,7 @@
 
   .basketItem__field{
     margin: 0;
-    margin-bottom: 51px;
+    margin-bottom: 29px;
   }
   .basketItem__fields_is_secondField:last-of-type{
     margin: 0;
