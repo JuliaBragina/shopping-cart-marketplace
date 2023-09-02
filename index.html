@@ -79,7 +79,7 @@
                         <section class="popupSeller popupSeller_is_hidden">
                           <div class="popupSeller__container">
                             <div class="popupSeller__content">
-                              <h5 class="popupSeller__title">OOO «МЕГАПРОФСТИЛЬ»</h5>
+                              <h5 class="popupSeller__title">OOO Вайлдберриз</h5>
                               <p class="popupSeller__ogrn">ОГРН: <span class="popupSeller__ogrnNumber">5167746237148</span></p>
                               <address class="popupSeller__adress">129337, Москва, улица Красная Сосна, 2, корпус 1, стр. 1, помещение 2, офис 34</address>  
                             </div>
@@ -210,7 +210,7 @@
                         <section class="popupSeller popupSeller_is_hidden">
                           <div class="popupSeller__container">
                             <div class="popupSeller__content">
-                              <h5 class="popupSeller__title">OOO «МЕГАПРОФСТИЛЬ»</h5>
+                              <h5 class="popupSeller__title">OOO Вайлдберриз</h5>
                               <p class="popupSeller__ogrn">ОГРН: <span class="popupSeller__ogrnNumber">5167746237148</span></p>
                               <address class="popupSeller__adress">129337, Москва, улица Красная Сосна, 2, корпус 1, стр. 1, помещение 2, офис 34</address>  
                             </div>
@@ -514,103 +514,71 @@
   
         <section class="popup popupPayMethod">
           <div class="popup__container">
-            <div class="popup__titleContainer">
-              <h5 class="popup__title">Способы оплаты</h5>
-              <button type="button" class="popup__closeButton popupPayMethod__closeButton"><img class="popup__imgButton" src="./img/buttonClose.svg" alt="закрыть"></button>
+            <div clas="popup__section">
+              <div class="popup__titleContainer">
+                <h5 class="popup__title">Способы оплаты</h5>
+                <button type="button" class="popup__closeButton popupPayMethod__closeButton"><img class="popup__imgButton" src="./img/buttonClose.svg" alt="закрыть"></button>
+              </div>
+              <ul class="popup__cards">
+                <li class="popup__item">
+                  <div class="popup__checkBoxContainer">
+                    <input type="radio" name="payMethod" class="popup__input" id="popupPayMethod1" checked>
+                    <label for="popupPayMethod1" class="popup__label"></label>
+                  </div>
+                  <img class="popup__imgCard" src="./img/cardMir.svg" alt="карта">
+                  <p class="popup__cardNumber">1234 56•• •••• 1234</p>
+                </li>
+                <li class="popup__item">
+                  <div class="popup__checkBoxContainer">
+                    <input type="radio" name="payMethod" class="popup__input" id="popupPayMethod2">
+                    <label for="popupPayMethod2" class="popup__label"></label>
+                  </div>
+                  <img class="popup__imgCard" src="./img/cardVisa.svg" alt="карта">
+                  <p class="popup__cardNumber">1234 56•• •••• 1234</p>
+                </li>
+                <li class="popup__item">
+                  <div class="popup__checkBoxContainer">
+                    <input type="radio" name="payMethod" class="popup__input" id="popupPayMethod3">
+                    <label for="popupPayMethod3" class="popup__label"></label>
+                  </div>
+                  <img class="popup__imgCard" src="./img/cardMastercard.svg" alt="карта">
+                  <p class="popup__cardNumber">1234 56•• •••• 1234</p>
+                </li>
+                <li class="popup__item">
+                  <div class="popup__checkBoxContainer">
+                    <input type="radio" name="payMethod" class="popup__input" id="popupPayMethod4">
+                    <label for="popupPayMethod4" class="popup__label"></label>
+                  </div>
+                  <img class="popup__imgCard" src="./img/cardMaestro.svg" alt="карта">
+                  <p class="popup__cardNumber">1234 56•• •••• 1234</p>
+                </li>
+              </ul>
             </div>
-            <ul class="popup__cards">
-              <li class="popup__item">
-                <div class="popup__checkBoxContainer">
-                  <input type="radio" name="payMethod" class="popup__input" id="popupPayMethod1" checked>
-                  <label for="popupPayMethod1" class="popup__label"></label>
-                </div>
-                <img class="popup__imgCard" src="./img/cardMir.svg" alt="карта">
-                <p class="popup__cardNumber">1234 56•• •••• 1234</p>
-              </li>
-              <li class="popup__item">
-                <div class="popup__checkBoxContainer">
-                  <input type="radio" name="payMethod" class="popup__input" id="popupPayMethod2">
-                  <label for="popupPayMethod2" class="popup__label"></label>
-                </div>
-                <img class="popup__imgCard" src="./img/cardVisa.svg" alt="карта">
-                <p class="popup__cardNumber">1234 56•• •••• 1234</p>
-              </li>
-              <li class="popup__item">
-                <div class="popup__checkBoxContainer">
-                  <input type="radio" name="payMethod" class="popup__input" id="popupPayMethod3">
-                  <label for="popupPayMethod3" class="popup__label"></label>
-                </div>
-                <img class="popup__imgCard" src="./img/cardMastercard.svg" alt="карта">
-                <p class="popup__cardNumber">1234 56•• •••• 1234</p>
-              </li>
-              <li class="popup__item">
-                <div class="popup__checkBoxContainer">
-                  <input type="radio" name="payMethod" class="popup__input" id="popupPayMethod4">
-                  <label for="popupPayMethod4" class="popup__label"></label>
-                </div>
-                <img class="popup__imgCard" src="./img/cardMaestro.svg" alt="карта">
-                <p class="popup__cardNumber">1234 56•• •••• 1234</p>
-              </li>
-            </ul>
             <button type="submit" class="popup__button">Выбрать</button>
           </div>
         </section>
         
         <section class="popup popupChooseDelivery">
           <div class="popup__container popup__container_type_chooseDelivery">
-            <div class="popup__titleContainer">
-              <h5 class="popup__title">Способы доставки</h5>
-              <button type="button" class="popup__closeButton popupChooseDelivery__closeButton"><img class="popup__imgButton" src="./img/buttonClose.svg" alt="закрыть"></button>
-            </div>
-            <div class="popup__chooseDelivery">
-              <input class="popup__chooseDeliveryButton" type="radio" name="deliveryOption" id="courierOption" value="courier" checked>
-              <label class="popup__chooseDeliveryLabel" for="courierOption">В пункт выдачи</label>
-              <input class="popup__chooseDeliveryButton" type="radio" name="deliveryOption" id="pickupOption" value="pickup">
-              <label class="popup__chooseDeliveryLabel" for="pickupOption">Курьером</label>
-            </div>
-            <div id="courierAddress" class="popup__addressesCont popup__addressesCont_by_courier popup__addressesCont_is_hidden">
-              <h6 class="popup__chooseDeliveryTitle">Мои адреса</h6>
-              <ul class="popup__addresses">
-                <li class="popup__item popup__item_type_chooseDelivery">
-                  <div class="popup__itemContainer">
-                    <div class="popup__checkBoxContainer">
-                      <input type="radio" name="payMethod" class="popup__input" id="address1">
-                      <label for="address1" class="popup__label"></label>
-                    </div>
-                    <address class="popup__address">Бишкек, улица Табышалиева, 57</address>
-                  </div>
-                  <button type="button" class="popup__deleteButton"></button>
-                </li>
-                <li class="popup__item popup__item_type_chooseDelivery">
-                  <div class="popup__itemContainer">
-                    <div class="popup__checkBoxContainer">
-                      <input type="radio" name="payMethod" class="popup__input" id="address2">
-                      <label for="address2" class="popup__label"></label>
-                    </div>
-                    <address class="popup__address">Бишкек, улица Жукеева-Пудовкина, 77/1</address>
-                  </div>
-                  <button type="button" class="popup__deleteButton"></button>
-                </li>
-                <li class="popup__item popup__item_type_chooseDelivery">
-                  <div class="popup__itemContainer">
-                    <div class="popup__checkBoxContainer">
-                      <input type="radio" name="payMethod" class="popup__input" id="address3">
-                      <label for="address3" class="popup__label"></label>
-                    </div>
-                    <address class="popup__address">Бишкек, микрорайон Джал, улица Ахунбаева Исы, 67/1</address>
-                  </div> 
-                  <button type="button" class="popup__deleteButton"></button>
-                </li>
-              </ul>
-            </div>
-            <div id="pickupAddress" class="popup__addressesCont popup__addressesCont_by_pickPoint">
-              <h6 class="popup__chooseDeliveryTitle">Адреса пунктов выдачи заказа</h6>
-                <ul class="popup__addresses popup__cards">
+            <div clas="popup__section">
+              <div class="popup__titleContainer">
+                <h5 class="popup__title">Способы доставки</h5>
+                <button type="button" class="popup__closeButton popupChooseDelivery__closeButton"><img class="popup__imgButton" src="./img/buttonClose.svg" alt="закрыть"></button>
+              </div>
+              <div class="popup__chooseDelivery">
+                <input class="popup__chooseDeliveryButton" type="radio" name="deliveryOption" id="courierOption" value="courier" checked>
+                <label class="popup__chooseDeliveryLabel" for="courierOption">В пункт выдачи</label>
+                <input class="popup__chooseDeliveryButton" type="radio" name="deliveryOption" id="pickupOption" value="pickup">
+                <label class="popup__chooseDeliveryLabel" for="pickupOption">Курьером</label>
+              </div>
+              <div id="courierAddress" class="popup__addressesCont popup__addressesCont_by_courier popup__addressesCont_is_hidden">
+                <h6 class="popup__chooseDeliveryTitle">Мои адреса</h6>
+                <ul class="popup__addresses">
                   <li class="popup__item popup__item_type_chooseDelivery">
                     <div class="popup__itemContainer">
                       <div class="popup__checkBoxContainer">
-                        <input type="radio" name="payMethod" class="popup__input" id="addressPickPoint1" checked>
-                        <label for="addressPickPoint1" class="popup__label"></label>
+                        <input type="radio" name="payMethod" class="popup__input" id="address1">
+                        <label for="address1" class="popup__label"></label>
                       </div>
                       <address class="popup__address">Бишкек, улица Табышалиева, 57</address>
                     </div>
@@ -619,14 +587,50 @@
                   <li class="popup__item popup__item_type_chooseDelivery">
                     <div class="popup__itemContainer">
                       <div class="popup__checkBoxContainer">
-                        <input type="radio" name="payMethod" class="popup__input" id="addressPickPoint2">
-                        <label for="addressPickPoint2" class="popup__label"></label>
+                        <input type="radio" name="payMethod" class="popup__input" id="address2">
+                        <label for="address2" class="popup__label"></label>
                       </div>
                       <address class="popup__address">Бишкек, улица Жукеева-Пудовкина, 77/1</address>
                     </div>
                     <button type="button" class="popup__deleteButton"></button>
                   </li>
+                  <li class="popup__item popup__item_type_chooseDelivery">
+                    <div class="popup__itemContainer">
+                      <div class="popup__checkBoxContainer">
+                        <input type="radio" name="payMethod" class="popup__input" id="address3">
+                        <label for="address3" class="popup__label"></label>
+                      </div>
+                      <address class="popup__address">Бишкек, микрорайон Джал, улица Ахунбаева Исы, 67/1</address>
+                    </div> 
+                    <button type="button" class="popup__deleteButton"></button>
+                  </li>
                 </ul>
+              </div>
+              <div id="pickupAddress" class="popup__addressesCont popup__addressesCont_by_pickPoint">
+                <h6 class="popup__chooseDeliveryTitle">Адреса пунктов выдачи заказа</h6>
+                  <ul class="popup__addresses popup__cards">
+                    <li class="popup__item popup__item_type_chooseDelivery">
+                      <div class="popup__itemContainer">
+                        <div class="popup__checkBoxContainer">
+                          <input type="radio" name="payMethod" class="popup__input" id="addressPickPoint1" checked>
+                          <label for="addressPickPoint1" class="popup__label"></label>
+                        </div>
+                        <address class="popup__address">Бишкек, улица Табышалиева, 57</address>
+                      </div>
+                      <button type="button" class="popup__deleteButton"></button>
+                    </li>
+                    <li class="popup__item popup__item_type_chooseDelivery">
+                      <div class="popup__itemContainer">
+                        <div class="popup__checkBoxContainer">
+                          <input type="radio" name="payMethod" class="popup__input" id="addressPickPoint2">
+                          <label for="addressPickPoint2" class="popup__label"></label>
+                        </div>
+                        <address class="popup__address">Бишкек, улица Жукеева-Пудовкина, 77/1</address>
+                      </div>
+                      <button type="button" class="popup__deleteButton"></button>
+                    </li>
+                  </ul>
+              </div>
             </div>
             <button type="submit" class="popup__button">Выбрать</button>
           </div>

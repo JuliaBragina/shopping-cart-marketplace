@@ -27,10 +27,14 @@
   border-radius: 16px;
   background-color: white;
 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
   padding: 16px 22px 22px 24px;
 }
 
-.ppopup__container_type_chooseDelivery{
+.popup__container_type_chooseDelivery{
   width: 500px;
 }
   
@@ -65,13 +69,11 @@
 .popup__cards {
   margin: 0;
   padding: 0;
-  height: 284px
 }
 
 .popup__addresses{
   margin: 0;
   padding: 0;
-  height: 189px
 }
   
 .popup__item {

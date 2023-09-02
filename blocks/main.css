@@ -219,7 +219,7 @@
 
 .main__counterButton_is_left{
   border-radius: 8px 0 0 8px;
-  background-image: url('../../img/buttonMinus.svg');
+  background-image: url('../img/buttonMinus.svg');
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -236,7 +236,7 @@
 
 .main__counterButton_is_right{
   border-radius: 0 8px 8px 0;
-  background-image: url('../../img/buttonPlus.svg');
+  background-image: url('../img/buttonPlus.svg');
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -294,19 +294,19 @@
 
 .main__buttonLikeDelete_is_like{
   margin-right: 15px;
-  background-image: url('../../img/buttonLike.svg');
+  background-image: url('../img/buttonLike.svg');
 }
 
 .main__buttonLikeDelete_is_like:hover{
-  background-image: url('../../img/buttonLikeActive.svg');
+  background-image: url('../img/buttonLikeActive.svg');
 }
 
 .main__buttonLikeDelete_is_delete{
-  background-image: url('../../img/buttonTrash2.svg');
+  background-image: url('../img/buttonTrash2.svg');
 }
 
 .main__buttonLikeDelete_is_delete:hover{
-  background-image: url('../../img/buttonTrash2Active.svg');
+  background-image: url('../img/buttonTrash2Active.svg');
 }
 
 /*Цена со скидкой и без скидки */
@@ -394,7 +394,7 @@
 .main__checkbox:checked + .main__checkboxLabel::before {
   background-color: #CB11AB;
   border-color: #CB11AB;
-  background-image: url("../../img/checkbox.svg");
+  background-image: url("../img/checkbox.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
