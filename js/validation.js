@@ -30,7 +30,7 @@ const isValid = (element) => {
 button.addEventListener('click', (event) => {
   let hasErrors = false;
   formInput.forEach((element) => {
-    element.addEventListener('blur', ()=> {
+    element.addEventListener('input', ()=> {
       isValid(element);
     })
     if (!isValid(element)) {

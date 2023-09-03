@@ -1,15 +1,15 @@
 const main = document.querySelector('.main');
-const mainCardsExist = document.querySelector('.main__cards_exict');
-const mainCardsDontExist = document.querySelector('.main__cards_dontExict');
+const mainCardsExist = document.querySelector('.main__cards_existGoods');
+const mainCardsDontExist = document.querySelector('.main__cards_dontExistGoods');
 
 const mainCards = document.querySelector('.main__cards');
-const mainSellerImg = document.querySelectorAll('.main__sellerImg');
+const mainSellerImg = document.querySelectorAll('.card__sellerImg');
 const orderDetails = document.querySelectorAll('.order-details__infoPrice');
-const priceSell = document.querySelectorAll('.main__goodsPriceNoDiscount');
+const priceSell = document.querySelectorAll('.card__priceNoDiscount');
 
 const checkBoxAll = document.querySelector('.main__checkboxContainer_mainCheckbox');
 const accordeonBoxAll = document.querySelector('.accordeon__info_goods');
-const accordeonBoxAll2 = document.querySelector('.accordeon__info_dontExist');
+const accordeonBoxAll2 = document.querySelector('.accordeon__info_dontExistGoods');
 
 const popupSeller = document.querySelector('.popupSeller');
 const popupSale = document.querySelector('.popupSale');
@@ -37,14 +37,14 @@ const pickupAddress = document.querySelector('.popup__addressesCont_by_pickPoint
 
 // Обработчики событий для раскрывающихся секций (аккордеонов)
 accordeonSection.addEventListener('click', () => {
-  mainCardsExist.classList.toggle('main__cards_is_hidden');
+  mainCardsExist.classList.toggle('main__cards_hidden');
   accordeonSection.classList.toggle('accordeon__icon_is_closed');
   checkBoxAll.classList.toggle('main__payStartWrapper_is_hidden');
   accordeonBoxAll.classList.toggle('accordeon__info_is_hidden');
 });
 
 accordeonSectionDontExictGoods.addEventListener('click', () => {
-  mainCardsDontExist.classList.toggle('main__cards_is_hidden');
+  mainCardsDontExist.classList.toggle('main__cards_hidden');
   accordeonSectionDontExictGoods.classList.toggle('accordeon__icon_is_closed');
 });
 

@@ -1,0 +1,510 @@
+/*Карточка*/
+
+.card{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: max-content;
+  margin-bottom: 18px;
+}
+
+.card_dontExistGoods{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+  
+.card:last-of-type{
+  margin-bottom: 0;
+}
+
+/*Описание карточки*/
+
+.card__description{
+  padding-top: 9px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.card__description_dontExistGoods{
+  opacity: .6;
+  filter: grayscale(100%);
+}
+
+/*Картинка на карточке*/
+
+.card__img{
+  width: 72px;
+  height: 96px;
+  object-fit: contain;
+  margin: 0 15px 0 6px;
+}
+
+.card__img_dontExist{
+  margin: 0 15px 0 0;
+}
+
+/*Свойства карточки*/
+
+.card__property{
+  width: 320px;
+}
+
+/*Заголовок карточки + ссылка*/
+
+.card__nameLink{
+  text-decoration: none;
+  color: black;
+}
+
+.card__propertyName{
+  margin: 0;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: normal;
+  font-family: 'Segoe UI', Arial, sans-serif;
+ 
+  margin-bottom: 6px;
+}
+
+/*Цвет и размер товара*/
+
+.card__sizeColorBox{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 8px;
+}
+  
+.card__sizeColorBox_hidden{
+  display: none;
+}
+
+.card__propertyColor, .card__propertySize{
+  margin: 0;
+  
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: normal;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  
+  margin-right: 17px;
+}
+
+.card__propertySize_hidden{
+  display: none; 
+}
+
+/*Место хранения*/
+
+.card__proprtyStorage{
+  margin: 0;
+  
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: normal;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #A0A0A4;
+
+  margin-bottom: 4px;
+}
+
+/*Продавец*/
+
+.card__sellerContainer{
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+}
+
+.card__propertySeller{
+  margin: 0;
+  
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: normal;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #A0A0A4;
+  
+  margin-right: 8px;
+}
+
+.card__sellerImg{
+  height: 20px;
+  width: 20px;
+  object-fit: contain;
+ 
+  cursor: pointer;
+}
+
+/*Контейнер цены товара, количества*/
+
+.card__priceContainer{
+  padding-top: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 226px
+}
+
+/*Счетчик товара*/
+
+.card__counterPrice{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.card__counterContainer{
+  height: 44px;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 9px;
+}
+
+.card__counterButton{
+  padding: 0;
+  margin: 0;
+  width: 25px;
+  height: 100%;
+  background-color: white;
+  border: 0;
+  cursor: pointer;
+}
+  
+.card__counterButton_is_left{
+  border-radius: 8px 0 0 8px;
+  background-image: url('../img/buttonMinus.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+}
+  
+.card__counterButton_is_left:hover{
+  background-color: #F6F6FA;
+}
+  
+.card__counterButton_is_left:disabled{
+  cursor: auto;
+  opacity: .5;
+  background-color: white;
+}
+  
+.card__counterButton_is_right{
+  border-radius: 0 8px 8px 0;
+  background-image: url('../img/buttonPlus.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+}
+  
+.card__counterButton_is_right:hover{
+  background-color: #F6F6FA;
+}
+  
+.card__counterButton_is_right:disabled{
+  cursor: auto;
+  opacity: .5;
+  background-color: white;
+}
+
+.card__counterInput{
+  border: 0;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  width: 50px;
+  height: 100%;
+  
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: normal;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+ /*Остаток товара на складе*/
+
+.card__quantity{
+  margin: 0;
+  margin-bottom: 10px;
+  
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: normal;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #FF3B30;
+}
+
+ /*Кнопки лайк и удалить*/
+
+.card__buttonsContainer{ 
+  padding-left: 42px;
+}
+
+.card__buttonsContainer:hover > .card__button{
+  visibility: visible;
+}
+  
+.card__buttonsContainer_dontExistGoods{
+  padding: 0;
+  padding-top: 9px;
+  width: 226px;
+}
+
+.card__button{
+  visibility: hidden;
+  
+  background-color: transparent;
+  border: 0;
+  height: 20px;
+  width: 20px;
+  background-repeat: no-repeat;
+  padding: 0;
+  cursor: pointer;
+}
+  
+.card__button_is_like{
+  margin-right: 15px;
+  background-image: url('../img/buttonLike.svg');
+}
+
+.card__button_dontExistGoods{
+  margin-left: 42px;
+}
+  
+.card__button_is_like:hover{
+  background-image: url('../img/buttonLikeActive.svg');
+}
+  
+.card__button_is_delete{
+  background-image: url('../img/buttonTrash2.svg');
+}
+  
+.card__button_is_delete:hover{
+  background-image: url('../img/buttonTrash2Active.svg');
+}
+
+/*Цена товара*/
+
+.card__price{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  position: relative;
+}
+
+.card__price_mobile{
+  display: none;
+}
+
+.card__priceDiscount{
+  margin: 0;
+  margin-bottom: 5px;
+
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: bold;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.card__priceNoDiscount{
+  margin: 0;
+  
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: normal;
+  font-family: 'Segoe UI', Arial, sans-serif;
+
+  color: #A0A0A4;
+  border-bottom: 1px dashed #A0A0A4;
+  text-decoration: line-through;
+
+  cursor: pointer;
+}
+
+.card__priceDiscount_smallLetters{
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: bold;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+@media screen and (max-width: 960px) {
+  /*Свойства карточки*/
+  .card__property{
+    width: 205px;
+  }
+}
+
+@media screen and (max-width: 890px) {
+  /*Кнопки лайк и удалить*/
+  .card__button{
+    visibility: visible;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+
+  /*Карточка*/
+  .card{
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 16px;
+    position: relative;
+  }
+    
+  .card::after{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, .1);
+    height: 0;
+    top: -10px;
+    left: 0;
+  }
+
+  .card_dontExistGoods{
+    justify-content: space-between;
+    align-items: flex-end;
+
+  }
+    
+  .card_dontExistGoods::after{
+    top: 0;
+  }
+    
+  .card:first-of-type::after{
+    display: none;
+  }
+
+  /*Описание карточки*/
+
+  .card__description{
+    padding: 0;
+    padding-bottom: 12px;
+  }
+
+  .card__description_dontExistGoods{
+    width: 100%;
+    padding-top: 13px;
+  }
+
+  /*Картинка на карточке*/
+
+  .card__img{
+    width: 80px;
+    height: 106px;
+    margin-left: 0;
+  }
+
+  /*Свойства карточки*/
+
+  .card__property{
+    width: 195px;
+  }
+
+  .card__propertyName{
+    font-size: 14px;
+    line-height: 20px;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+              line-clamp: 2;
+      -webkit-box-orient: vertical;
+  }
+
+  /*Продавец*/
+
+  .card__sellerContainer{
+    display: none;
+  }
+
+  /*Контейнер цены товара, количества*/
+
+  .card__priceContainer{
+    width: 100%;
+    padding: 0;
+  }
+
+  /*Счетчик товара*/
+
+  .card__counterContainer{
+    height: 32px;
+    width: 80px;
+  }
+
+  .card__counterPrice{
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .main__counter{
+    height: 32px;
+    width: 80px;
+    display: flex;
+    margin-bottom: 8px;
+  }
+
+  .card__counterInput{
+    font-size: 14px;
+    line-height: 20px;
+    width: 32px;
+  }
+
+  /*Остаток товара на складе*/
+
+  .card__quantity{
+    margin-bottom: 5px;
+    margin-right: 8px;
+  }
+
+   /*Кнопки лайк и удалить*/
+   
+  .card__buttonsContainer{
+    margin: 0;
+    padding: 0;
+  }
+
+  .card__buttonsContainer_dontExistGoods{
+    width: fit-content;
+  }
+
+  .card__button_is_like{
+    margin-right: 22px;
+  }
+
+  .card__button_is_delete{
+    margin-right: 9px;
+  }
+
+  .card__button_dontExistGoods{
+    margin-left: 0;
+  }
+
+  /*Цена товара*/
+
+  .card__price{
+    display: none;
+  }
+
+  .card__price_mobile{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .card__priceDiscount{
+    margin: 0;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin-right: 5px;
+  }
+}

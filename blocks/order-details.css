@@ -1,7 +1,7 @@
 .order-details{
   position: absolute;
   right: 0;
-  top: 0;
+  top: -9px;
   background-color: white;
   width: 31.7%;
   border-radius: 12px;

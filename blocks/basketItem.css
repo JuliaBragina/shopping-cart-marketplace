@@ -1,7 +1,3 @@
-.basketItem__title, .basketItem__itemTitle, .basketItem__timeOfWork, .basketItem__priceDelivery, .basketItem__cardNumber, .basketItem__expareDate, .basketItem__information{
-  margin: 0;
-}
-
 .basketItem{
   width: 65.9%;
   background-color: white;
@@ -11,24 +7,27 @@
 }
 
 .basketItem__title{
+  margin: 0;
   font-size: 24px;
   line-height: 32px;
   font-weight: bold;
   font-family: 'Segoe UI', Arial, sans-serif;
-}
 
-.basketItem__title{
   padding-bottom: 16px;
 }
 
 .basketItem__itemTitle{
+  margin: 0;
   font-size: 16px;
   line-height: 24px;
   font-weight: 600;
   font-family: 'Segoe UI', Arial, sans-serif;
+
+  flex-basis: 159px;
 }
 
-.basketItem__address, .basketItem__priceDelivery, .basketItem__cardNumber, .basketItem__expareDate, .basketItem__label{
+.basketItem__address, .basketItem__priceDelivery, .basketItem__cardNumber, .basketItem__expareDate{
+  margin: 0;
   font-size: 16px;
   line-height: 24px;
   font-weight: normal;
@@ -36,14 +35,30 @@
   font-style: normal;
 }
 
+.basketItem__cardNumber{
+  margin-right: 8px;
+}
+
 .basketItem__editButton{
   font-size: 16px;
   line-height: 24px;
   font-weight: bold;
   font-family: 'Segoe UI', Arial, sans-serif;
+
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+  color: hsl(310, 85%, 43%);
+
+  cursor: pointer;
+}
+
+.basketItem__editButton:hover{
+  color: hsl(310, 85%, 43%, .45);
 }
 
 .basketItem__ratingNum, .basketItem__timeOfWork, .basketItem__information{
+  margin: 0;
   font-size: 13px;
   line-height: 16px;
   font-weight: normal;
@@ -76,24 +91,12 @@
   align-items: center;
 }
 
-.basketItem__editButton{
-  background-color: transparent;
-  border: 0;
-  padding: 0;
-  color: #CB11AB;
-  cursor: pointer;
-}
-
 .basketItem__item{
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   gap: 26px;
   margin-bottom: 16px;
-}
-
-.basketItem__itemTitle{
-  flex-basis: 159px;
 }
 
 .basketItem__descriptionPointOfIssue{
@@ -135,10 +138,6 @@
   width: 30px;
   height: 10px;
   object-fit: contain;
-  margin-right: 8px;
-}
-
-.basketItem__cardNumber{
   margin-right: 8px;
 }
 
@@ -195,11 +194,19 @@
 }
 
 .basketItem__label{
+  margin: 0;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: normal;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  font-style: normal;
+
   position: absolute;
   pointer-events: none;
   left: 0;
   top: -5px;
   transition: 0.2s ease all;
+
   color: #A0A0A4;
 }
 
@@ -260,12 +267,17 @@
 @media screen and (max-width: 890px) {
   .basketItem{
     width: 100%;
-    margin-bottom: 5px;
+    margin-bottom: 16px;
+  }
+
+  .basketItem:last-of-type{
+    padding: 16px 0 9px 0;
   }
 }
 
 @media screen and (max-width: 425px) {
   .basketItem__item{
+    margin-bottom: 20px;
     flex-direction: column;
     gap: 0;
   }
@@ -277,8 +289,6 @@
   .basketItem__title{
     font-size: 20px;
     line-height: 28px;
-    font-weight: bold;
-    font-family: 'Segoe UI', Arial, sans-serif;
     letter-spacing: 1%;
 
     padding-bottom: 8px;
@@ -305,10 +315,10 @@
 
   .basketItem__field{
     margin: 0;
-    margin-bottom: 29px;
+    margin-bottom: 28px;
   }
+
   .basketItem__fields_is_secondField:last-of-type{
     margin: 0;
   }
-  
 }

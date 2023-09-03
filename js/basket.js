@@ -1,12 +1,12 @@
 const mainCheckbox = document.getElementById('checkboxMain');
 const checkboxes = document.querySelectorAll('.main__priceGoods');
 
-const countInputs = document.querySelectorAll('.main__counterInput');
-const decreaseButtons = document.querySelectorAll('.main__counterButton_is_left');
-const increaseButtons = document.querySelectorAll('.main__counterButton_is_right');
+const countInputs = document.querySelectorAll('.card__counterInput');
+const decreaseButtons = document.querySelectorAll('.card__counterButton_is_left');
+const increaseButtons = document.querySelectorAll('.card__counterButton_is_right');
 
-const prices = document.querySelectorAll('.main__goodsPriceDiscount');
-const pricesWithDiscount = document.querySelectorAll('.main__goodsPriceNoDiscount');
+const prices = document.querySelectorAll('.card__priceDiscount');
+const pricesWithDiscount = document.querySelectorAll('.card__priceNoDiscount');
 
 const totalPrice = document.querySelector('.order-details__totalPrice');
 const totalProceDiscount = document.querySelector('.order-details__titlePrice');
@@ -20,7 +20,7 @@ const payButton = document.querySelector('.order-details__orderButton');
 const infoPay = document.querySelector('.order-details__infoPay');
 
 const countGoodsExist = document.querySelector('.countGoods__headerCount');
-const countGoodsDontExist = main.querySelector('.accordeon__countDontExist');
+const countGoodsDontExist = main.querySelector('.accordeon__countDontExistGoods');
 
 //Стоимость товаров
 let total = 0;
@@ -34,22 +34,22 @@ function counter() {
   //задиблим кнопки, если количество товара === 1 или максимальному количеству товара 
   countInputs.forEach(input => {
     if(parseFloat(input.value) === parseFloat(input.getAttribute('data-max-quantity'))) {
-      input.parentNode.querySelector('.main__counterButton_is_right').disabled = true;
+      input.parentNode.querySelector('.card__counterButton_is_right').disabled = true;
     }
     if(parseFloat(input.value) === 1) {
-      input.parentNode.querySelector('.main__counterButton_is_left').disabled = true;
+      input.parentNode.querySelector('.card__counterButton_is_left').disabled = true;
     }
   })
 
   //обрабочик для кнопки -1
   decreaseButtons.forEach(button => {
     button.addEventListener('click', () => {
-      const input = button.parentNode.querySelector('.main__counterInput');
+      const input = button.parentNode.querySelector('.card__counterInput');
       const currentValue = parseFloat(input.value);
       
       if (currentValue > 1) {
         input.value = currentValue - 1;
-        button.parentNode.querySelector('.main__counterButton_is_right').removeAttribute('disabled');
+        button.parentNode.querySelector('.card__counterButton_is_right').removeAttribute('disabled');
         updateTotal();
       } else {
         button.setAttribute('disabled', true);
@@ -61,13 +61,13 @@ function counter() {
   //обрабочик для кнопки +1
   increaseButtons.forEach(button => {
     button.addEventListener('click', () => {
-      const input = button.parentNode.querySelector('.main__counterInput');
+      const input = button.parentNode.querySelector('.card__counterInput');
       const currentValue = parseFloat(input.value);
       const maxQuantity = parseFloat(input.getAttribute('data-max-quantity'));
 
       if (currentValue < maxQuantity) {
         input.value = currentValue + 1;
-        button.parentNode.querySelector('.main__counterButton_is_left').removeAttribute('disabled');
+        button.parentNode.querySelector('.card__counterButton_is_left').removeAttribute('disabled');
         updateTotal();
       } else {
         button.setAttribute('disabled', true);
@@ -91,7 +91,7 @@ function updateTotal() {
   checkboxes.forEach((checkbox, index) => {
     if (checkbox.checked) {
       const price = parseFloat(checkbox.getAttribute('data-price'));
-      const countValue = parseFloat(checkbox.parentNode.parentNode.parentNode.querySelector('.main__counterInput').value);
+      const countValue = parseFloat(checkbox.parentNode.parentNode.parentNode.querySelector('.card__counterInput').value);
       const itemTotal = isNaN(countValue) ? 0 : countValue * price;
       massPrice[index] = itemTotal;
       massPriceDiscount[index] = itemTotal * 0.5; //рассчет скидки
@@ -150,8 +150,8 @@ mainCheckbox.addEventListener('change', () => {
 countInputs.forEach(input => input.addEventListener('input', updateTotal))
 checkboxes.forEach(checkbox => checkbox.addEventListener('change', updateTotal));
 
-countGoodsExist.textContent = main.querySelector('.main__cards_exict').children.length + '';
-countGoodsDontExist.textContent = main.querySelector('.main__cards_dontExict').children.length + ' товара';
+countGoodsExist.textContent = main.querySelector('.main__cards_existGoods').children.length + '';
+countGoodsDontExist.textContent = main.querySelector('.main__cards_dontExistGoods').children.length + ' товара';
 
 counter();
 updateTotal();
