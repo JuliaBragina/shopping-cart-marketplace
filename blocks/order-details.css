@@ -90,6 +90,10 @@
   padding-left: 6px;
 }
 
+.order-details__editImg:hover{
+  opacity: .5;
+}
+
 .order-details__deliveryAdress, .order-details__deliveryTime{
   margin: 0;
   font-size: 13px;
@@ -242,6 +246,11 @@
   
 .order-details__paymentLabel:hover::before {
   border-color: rgba(0, 0, 0);
+}
+
+.order-details__paymentInput:hover:checked + .order-details__paymentLabel::before {
+  background-color: hsla(310, 85%, 43%, 0.45);;
+  border-color: hsla(310, 85%, 43%, 0.45);
 }
 
 @media screen and (max-width: 1024px) {

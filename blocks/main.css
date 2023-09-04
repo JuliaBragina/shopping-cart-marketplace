@@ -106,6 +106,11 @@
   background-repeat: no-repeat;
   background-position: center;
 }
+
+.main__checkbox:hover:checked + .main__checkboxLabel::before {
+  background-color: hsla(310, 85%, 43%, .45);
+  border-color: hsla(310, 85%, 43%, .45);;
+}
   
 .main__checkboxLabel::before{
   content: "";

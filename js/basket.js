@@ -20,7 +20,7 @@ const payButton = document.querySelector('.order-details__orderButton');
 const infoPay = document.querySelector('.order-details__infoPay');
 
 const countGoodsExist = document.querySelector('.countGoods__headerCount');
-const countGoodsDontExist = main.querySelector('.accordeon__countDontExistGoods');
+const countGoodsDontExist = document.querySelector('.accordeon__countDontExistGoods');
 
 //Стоимость товаров
 let total = 0;
@@ -31,50 +31,50 @@ let totalCount = 0;
 
 //функция работы со счетчиком товаров в корзине
 function counter() {
-  //задиблим кнопки, если количество товара === 1 или максимальному количеству товара 
   countInputs.forEach(input => {
-    if(parseFloat(input.value) === parseFloat(input.getAttribute('data-max-quantity'))) {
-      input.parentNode.querySelector('.card__counterButton_is_right').disabled = true;
-    }
-    if(parseFloat(input.value) === 1) {
-      input.parentNode.querySelector('.card__counterButton_is_left').disabled = true;
-    }
-  })
+    const currentValue = parseFloat(input.value);
+    const maxQuantity = parseFloat(input.getAttribute('data-max-quantity'));
 
-  //обрабочик для кнопки -1
+    input.parentNode.querySelector('.card__counterButton_is_left').disabled = currentValue === 1;
+    input.parentNode.querySelector('.card__counterButton_is_right').disabled = currentValue === maxQuantity;
+  });
+
+  // Обработчик для кнопок -1
   decreaseButtons.forEach(button => {
     button.addEventListener('click', () => {
-      const input = button.parentNode.querySelector('.card__counterInput');
-      const currentValue = parseFloat(input.value);
-      
-      if (currentValue > 1) {
-        input.value = currentValue - 1;
-        button.parentNode.querySelector('.card__counterButton_is_right').removeAttribute('disabled');
-        updateTotal();
-      } else {
-        button.setAttribute('disabled', true);
-        updateTotal();
-      }
+      handleCounterButtonClick(button, false);
     });
   });
     
-  //обрабочик для кнопки +1
+  // Обработчик для кнопок +1
   increaseButtons.forEach(button => {
     button.addEventListener('click', () => {
-      const input = button.parentNode.querySelector('.card__counterInput');
-      const currentValue = parseFloat(input.value);
-      const maxQuantity = parseFloat(input.getAttribute('data-max-quantity'));
-
-      if (currentValue < maxQuantity) {
-        input.value = currentValue + 1;
-        button.parentNode.querySelector('.card__counterButton_is_left').removeAttribute('disabled');
-        updateTotal();
-      } else {
-        button.setAttribute('disabled', true);
-        updateTotal();
-      }
+      handleCounterButtonClick(button, true);
     });
   });
+}
+
+// Обработчик для кнопок +1 и -1
+function handleCounterButtonClick(button, increment) {
+  const input = button.parentNode.querySelector('.card__counterInput');
+  let currentValue = parseFloat(input.value);
+  const maxQuantity = parseFloat(input.getAttribute('data-max-quantity'));
+
+  if (increment) {
+    if (currentValue < maxQuantity) {
+      currentValue += 1;
+    }
+  } else {
+    if (currentValue > 1) {
+      currentValue -= 1;
+    }
+  }
+
+  input.value = currentValue;
+  input.parentNode.querySelector('.card__counterButton_is_left').disabled = currentValue === 1;
+  input.parentNode.querySelector('.card__counterButton_is_right').disabled = currentValue === maxQuantity;
+
+  updateTotal();
 }
 
 // Функция для обновления суммы на основе выбранных товаров и количества

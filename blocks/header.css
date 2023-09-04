@@ -186,6 +186,10 @@
   cursor: pointer;
 }
 
+.header__profileButton:hover{
+  opacity: .5;
+}
+
 .header__profileButton:last-of-type{
   margin-right: 0;
 }
